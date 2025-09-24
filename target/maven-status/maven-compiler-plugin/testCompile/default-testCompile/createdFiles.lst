@@ -1,0 +1,10 @@
+com\Capium\Locators\ClientCreationLocators.class
+com\Capium\StepDefination\AccountingPeriodStepDefination.class
+com\Capium\StepDefination\LoginStepDefination.class
+com\Capium\Actions\LoginActions.class
+com\Capium\StepDefination\Hooks.class
+com\Capium\Locators\AccountingPeriodLocators.class
+com\Capium\Actions\ClientCreateActions.class
+com\Capium\Locators\LoginLocators.class
+com\Capium\StepDefination\ClientCreationStepDefination.class
+com\Capium\Actions\AccountingPeriodActions.class

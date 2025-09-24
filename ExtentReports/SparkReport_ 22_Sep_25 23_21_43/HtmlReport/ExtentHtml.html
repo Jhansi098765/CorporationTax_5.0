@@ -1,0 +1,696 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 22, 2025 11:21:42 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$50%'>
+                    <span class='strong'>2</span> tests passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
+                    2</span> tests failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='66%'>
+                    <span class='strong'>2</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
+                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'></div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='96%'>
+                    <span class='strong'>26</span>  passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='3%'>
+                    1</span>  failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Dashboard</span>
+						<span class='test-time'>Sep 22, 2025 11:21:48 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2025 11:21:48 PM</span>
+	<span class='label end-time'>Sep 22, 2025 11:28:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 06 59.832</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Scenario: verify Monthly Submitted Return(s) This financial year dropdown</span>
+						<span class='test-time'>Sep 22, 2025 11:21:48 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2025 11:21:48 PM</span>
+	<span class='label end-time'>Sep 22, 2025 11:22:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 00 27.763</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:21:49 PM</td>
+				<td class='step-details'>
+						Launch the browser
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:21:51 PM</td>
+				<td class='step-details'>
+						User need to enter the Application Url
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:21:53 PM</td>
+				<td class='step-details'>
+						User Enter username and Password
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:21:59 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:04 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:16 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:16 PM</td>
+				<td class='step-details'>
+						Scenario Passed.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Scenario: verify Monthly Submitted Return(s) This financial year dropdown</span>
+						<span class='test-time'>Sep 22, 2025 11:22:22 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2025 11:22:22 PM</span>
+	<span class='label end-time'>Sep 22, 2025 11:22:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 00 29.644</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:25 PM</td>
+				<td class='step-details'>
+						Launch the browser
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:27 PM</td>
+				<td class='step-details'>
+						User need to enter the Application Url
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:28 PM</td>
+				<td class='step-details'>
+						User Enter username and Password
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:34 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:22:40 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>11:22:52 PM</td>
+				<td class='step-details'>
+						User Click on login button
+						<a href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAMgCAIAAABNk+hsAAAQAElEQVR4nOzdeZBW1Z3w8QdosAPY0DQ0oLI1ww6tDYICCkIQUBaDM+MGpkwZHa1Kylkyk9kqlZkqUzWVSqZmkqkyE9TKGDXGDC5JFBGBAIJhlb3Z96WbrdumaRpQ3vP2U3bxRiFo8vO16c/nj1Pnnnvuaf+kvnW9T86MGTMyAAAAAADwx5aTAQAAAACAAAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwBAplmzZnl5eVdeeWVubm5NTc3JkyezYwYAAPgDCNAAADRGRUVFJSUlAwYMSNE5peeWLVt+7LZNdXbt2rVz586KiooMAADwSQjQAAA0Fq1aterXr1///v2vu+66Dh06ZOr68u7du9+rU1lZmcZTp06lGJ12pjGF6S5duowZMyY/Pz9tXrFixcqVK9OY9mQAAIBL0GTGjBkZAAC43N16662TJk0qKChI83fffTd15NWrV6fifCnPFhYW9u3bd/jw4QMHDjx27FjK0G+99db+/fszAADARQnQAABc5lI1Tuk5jTt37ly0aFHqzkeOHKm/26pVq06dOnWskyZt2rSpqqqqrrNr167du3eXl5fXbx4wYEDK0KNHj66pqXn99ddnz56dJhkAAOACBGgAAC5bBQUFKT3feuutKT0vWLBg3rx59bf69u1bXFw8ZMiQq666Krty4sSJioqK2tralKFTla7fmQL0li1bli9fvmrVquxKjx49brnllrFjx+7bty9l6IULF2YAAICPI0ADAHB5uuGGG+6+++6Ulc9PzyUlJUOHDh0wYEC7du22bt367rvvbtq0KXXn48ePnz17tv7Z/Pz8jh07du7cOcXoNPbr1y83N3fv3r0pQy9evPjw4cOZugw9YcKEkSNHLl269JVXXvFFDgAA+CgBGgCAy9A999wzadKk3/zmNzNnzsyupPQ8ZsyYNK5du3bNmjVpPHTo0CWeVlBQkLL1sGHDevXqdfLkyYULFy5atGjPnj3p1u23337vvfdWVVWlBv3GG29kAACA8wjQAABcbv7hH/6hf//+v/rVr1544YXMeel548aNc+fOXb58ef3OwsLC4uLiq6++OiXm/Pz8du3a5ebmlpWVpTZdXl5+9OjRw4cPb9q0qba2Nrt/wIABQ+vk5eWlw9OfyNR9Y3r69OnXXHPN888//9prr2UAAIAPCdAAAFxWfvzjH6eI/IMf/GDZsmXpctq0aXfeeeeOHTtSel60aFF2T4rOffr0GTRoUI8ePdLlyZMnj36ouro6lei2bdtmx9atW6cGvaxOOiT7eKdOne6///50SFpMGTql6rTy8MMP9+rV68knn1ywYEEGAACoI0ADAHD5ePzxx7t27frII4+kjpwuH3vsseuvv37+/PlPPfVUdkMqzhMnThwxYkSar1+//t06ZWVlFzqwTZs2N99888iRI6+55po1a9b89re/ra/YqUGPHz/+0KFDKTqXlpamlb/9279NVfq//uu/3nnnnQwAAJDJNEv/RM4AAEDDN3369CFDhvzVX/1VZWVluvze977Xq1evl19++bnnnsvU/a7gtGnTvvrVr+bm5r7++utPP/30G2+8sX379myqLiws7N69+6BBg7K/T5j2vP/++7V1tmzZ8tZbb6Wd7du3v/POO7t163bgGyZHvAAAEABJREFUwIH0J9auXbt3795x48aNGjVq06ZNR44cWbJkSXpwypQpGzdurKioyAAAQKPnDWgAAC4HEydOTAH6+9///urVq9PlE0880apVq3/913/dunVrpu4z0OluqskL69TU1KTFlKd79uyZovOF3slIETltXrVqVarP2ZW0c+rUqV26dHnppZdmz56dXfyXf/mXoqKiv//7v9+/f3+6/OY3v9msWbPvfve7Z86cyQAAQOMmQAMA0OCNHDnykUceqf9VwEcffXTEiBEPPfTQqVOn0uXYsWO/8pWvLFu27Ac/+EF2/3XXXTdlypTevXun+b59+zZs2JDG7A8PVlZWXnnlla3rDBkyZPDgwYWFhSlApxI9b9687OOpQafH01M///nPDxw4kFb+8z//Mz8/P9ugO3To8O1vfzv9uZ/85CcZAABo3HyCAwCAhq19+/Zf//rXV65cmf3UxqRJk2677bbHH388BeV0eccdd0yfPr2+PhcUFNx9991p5b333vv1r3+dHnnppZfWrl27a9euI0eO1NTUnDt3LmXrdDddrlu3bs6cOenWVVddlc4sKSlp0qTJzp07N2/enB5Jf2jAgAErVqw4ffr022+/nS779u1bWlqa/u6JEyf+/M//POXsvXv3ZgAAoBEToAEAaNimTZs2cODAmTNnVlRU3HTTTQ888MCzzz6b/RnAlIwffPDB11577cknn0yXw4YNe/TRR1u3bv3yyy8/9dRT27dvr6qq+r3np6C8dOnSlKE7d+6cMnT37t1TfU55OpXoKVOmdOnSJd2tra3dunXr7bffnp+fn/707t270/oNN9yQwne6lQEAgMZKgAYAoAHr0aNHSszz67Rt2zb7KvTPfvazdKtPnz7f/OY3Z82a9eKLL6bL8ePHP/TQQxs2bPi3f/u31I4zn1A2Q58+fXrs2LG9e/feuHHj3r17S0tL77rrroKCglWrVpWXl6fWnP5KTU3Ntm3b0mWq1VdcccWaNWsyAADQWAnQAAA0YHfffXe3bt2efvrpioqKFHwHDRo0c+bMysrKrl27/vVf//Wbb775v//7v2nbrbfe+uUvf/n8z0B/Olu3bk3RediwYcOHD1+yZEmq0ps2bbr//vtzcnJSkk53O3bsOGbMmLVr1+7evbtp06aTJ09OG44cOZIBAIBGqWkGAAAapuLi4ptuumnevHk7d+5s27bt2LFj586dm8pvpi5MZ38kMM379u2b6vOsWbP+wPqclQL0D3/4wxMnTrRp0yZ7+fjjj3fp0iV7N/XuY8eOtWzZMs1feuml2bNnZwAAoBHLyQAAQMM0fPjwNC5YsCCNY8aMad68eQrQaT5q1Kh+/fp9+9vfTvOuXbv+zd/8TarPKQdn/kj279//ne98p/4yNejt27dn54cPH055Om3IXj777LMZAABoxARoAAAapCZNmgwaNGjdunU7d+688sorx44d++abb5aVlbVo0WLChAmpRO/Zsydtu/fee1etWvVHrM8f68yZM/Xz+voMAAAI0AAANEglJSVt2rRZv359mg8ePLht27ZLlixJ84kTJ+bn56cYneapRA8cOPBb3/rW7z2tadOmnTp1ysvLS/363Llz1dXVR48erayszAAAAH8AARoAgAbp2muvTePy5cvTOGTIkM2bNx88eDDNb7755lSfDx8+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nduyZcuvfvWr2U92ZD65G2+88aGHHho+fPgzzzzzs5/9LFNXn1OMfvLJJxcvXpwu//Iv/zIV5x/96EcVFRUTJ06cMGHCrFmztm3blgEAgMZKgAYAoGE7depUSr3ZrLx58+aUiUtKSubMmZNuvfXWW3fWWbhwYU1Nzbp169LiXXfdNWTIkCZNmlx6hk7R+b777ps8eXIqy0888cQ777yT+bA+//SnP01/JV0+9thj6Z/Wzz777OrVq1MHf/jhh3ft2pXadAYAABoxARoAgIZt//79KfiOGzdu+/bte/fuTdn39ttvHzhwYIrOmbpvcfTp0+fLX/7yhg0bjh49Wlpaunbt2i5dukyaNGn06NE9evRo2bJlWj99+vRHTy4qKkrH3n333ePHj0/B+uWXX05Buby8PCcn54477kj1+cUXX3zttdfSznT+zTffnKr3K6+8ki6/8pWvdOvW7bnnnkv/bRkAAGjEmsyYMSMDAAANWV5e3j/90z+1aNHi7/7u786cOTNy5MhHHnlk1qxZ2Y9vJPfdd99tt9329NNPL1q0KG1IK6NGjRo8eHC/fv1SgE6Xx44dK6tTWVmZV6dz585XXXVVurVly5b169e/+eabJ06cSJfpqalTp7Zv3/4Xv/jFggUL0soNN9zwta99LXXt7373u+ly+vTpEydOnD179rPPPpsBAIDGzRvQAAA0eLW1tdu3b580adKgQYNSFN67d29avPPOOzt16rRixYo0z35840tf+tLw4cOvuOKKQ4cObd269Z133vnVr361adOmI0eO1NTUtG7dumfPngMGDEgb0uXOnTvnzp37k5/8ZM6cOaWlpadPny4oKLjnnntSy969e/ePfvSjVJzTmePHj3/ooYfS+dn6XFJScv/99y9fvnzmzJkZAABo9LwBDQDAZeL6669/7LHH3n777SeeeCJd9unT55//+Z9TmE4teN++fWnlqquumjhx4pgxY44fP75q1aqNGzcuW7bs9x6bk5MzYsSIlLYHDhyYIvWLL7746quvpvU2bdo8/PDDxcXF9a9a5+bm/vjHP05F+zvf+U4GAAAQoAEAuJxMmDAh/fu2/vMXnTt3/ou/+ItOnTq98MIL8+fPz+7p379/ytDXXntt06ZNT506tXbt2i1bthz9UE1NTdu2bdu1a5dfp1evXiUlJalBb926NTXrlStXHjx4MB2S/cpHmtTX57TzW9/6Vtrz7//+7xkAAKCOAA0AwGUl+0XmVIp/+MMfnj17tlWrVg8++ODQoUNTZZ47d+7SpUuz21JlHjRoUHFxcRrTno89qqqqqry8fM2aNcuWLav/OcHevXuPHj161KhRKUm/+uqr7777blr84he/+MADD6TG/dRTT2UAAIAPCdAAAFxuOnbs+DkrJ38AABAASURBVI1vfOP06dP//d//vXv37kzdp5nHjBmTxrVr17711lurVq06f39eXl72leeCgoLc3NwUncvKytJYU1Nz/rYbb7xx+PDhgwcPrqiomDdvXqrP77//ftp/zz33pAD929/+NiXvDAAAcB4BGgCAy1BOTs4DDzwwdOjQF154IcXi7GJ9hj5+/PiGDRtWr159Kd+ATnl65MiRI0aM6N69ezY9z58/P00ydZ/duPfee9P485///Je//GUGAAD4fwnQAABctqZNmzZ58uT9+/cvWLCgPkMXFRUNrNOvX7+zZ89u2rQp1eSUpCvq1NbWtm/fvkOHDu0+lJ+f37x583Xr1i1fvnzFihVVVVXpkJYtW956663p8AMHDqT6nHJ2BgAA+AgBGgCAy1m3bt1SJr7xxht37tx5foZOWrVqde211/bs2bNTp06FhYVp/J1nDx48uKPOtm3b0li/ntLz+PHjCwoKZs+e/eqrr546dSoDAAB8HAEaAIDLXwrQKUOnGF1eXr5u3bo1a9asXr36o9tSg87LyztRp7q6+v333z//bnFxcQrWaUzb3n777VSfd+3alQEAAC5MgAYAoFFo0aLFpEmTBg0a1KtXr3RZUVGxatWqpUuXVlVVVVZWpuL80Udyc3N79uxZVFR0zTXXpDF150OHDq1duzb16zRmAACA30eABgCgcencufN1111XXFw8cODA+sVz585V1qmtrW3ZsmWrVq2+8IUvpACdvbt169bt27evW7dOdwYAgE9EgAYAoJFq3rx5nz598uq0bt06O7niiitqampOnjyZHbfVSfMMAADwyeVkAACgUTpz5sz69eszAABAGAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAGjsWrRo0a1btzTZs2dPbW3t/6/Nl6JJkyZdu3Zt1qzZoUOHTp48mQEAgM83ARoAgEZt+vTp48ePb9q0afZy7ty5//M//3Pu3LnPePOlmDhx4ujRo1PUzl4uX778lVdeqampyQAAwOdVs+Li4gwAADRK3/jGN2666aYmTZrUrxQVFfXu3Xvx4sWf5eZLkXJ2OrBZs2b1K1dffXWfPn1Wrlz5/vvvZwAA4HNJgAYAoJG6/fbbx40b99H1wsLClHQ3b9782Wy+FNdff/348eM/up6Xl5ebm1taWpoBAIDPpaYZAABolEaMGHGhWzfddNNntvlSDB48+EK3UpvOAADA55UADQBAI3X11Vdf6Fbnzp3P/3pG6OZLUVhYeKFbubm5bdq0yQAAwOeSAA0AQCNV//OAH+t3MnHc5ktx8Uc+xYEAAPDZEKABAGikqqurL3Tr1KlTH3zwwWez+VLU1NRc5G46MwMAAJ9LAjQAAI3Uhg0bLv1W3OZLsW3btgvd2r17twANAMDnlgANAEAjNXv27Avdev311z+zzZdi4cKFZ86c+dhbCxYsyAAAwOdVs+Li4gwAADQ+x48fLy8vHzx48O98Q3nmzJkrV678zDZfipqamv379/ft27d58+bnr7/66qvLli3LAADA51WTGTNmZAAAoLHq0KHD6NGji4qK0nznzp0LFy4sKyv77DdfitatWw8fPrx79+7NmjU7cODAihUr0pgBAIDPMQEaAAAAAIAQORkAAAAAAAggQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAAAAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAghAANAAAAAEAIARoAAAAAgBACNAAAAAAAIQRoAAAAAABCCNAAAAAAAIQQoAEAAAAACCFAAwAAAAAQQoAGAAAAACCEAA0AAAAAQAgBGgAAAACAEAI0AAAAAAAhBGgAAAAAAEII0AAAAAAAhBCgAQAAAAAIIUADAACGE4YGAAAAU0lEQVQAABBCgAYAAAAAIIQADQAAAABACAEaAAAAAIAQAjQAAAAAACEEaAAAAAAAQgjQAAAAAACEEKABAAAAAAghQAMAAAAAEEKABgAAAAAgxP8BAAD//69Cr3wAAAAGSURBVAMA8//2BjesBcQAAAAASUVORK5CYII=' data-featherlight='image'><span class='label grey badge white-text text-white'>base64-img</span></a>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>11:22:52 PM</td>
+				<td class='step-details'>
+						Scenario Failed.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>Scenario: verify Monthly Submitted Return(s) This financial year dropdown</span>
+						<span class='test-time'>Sep 22, 2025 11:26:07 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2025 11:26:07 PM</span>
+	<span class='label end-time'>Sep 22, 2025 11:28:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 30.717</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:26:10 PM</td>
+				<td class='step-details'>
+						Launch the browser
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:26:13 PM</td>
+				<td class='step-details'>
+						User need to enter the Application Url
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:26:14 PM</td>
+				<td class='step-details'>
+						User Enter username and Password
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:26:21 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:26:27 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:26:47 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:27:01 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:27:15 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:27:29 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:27:42 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:27:56 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:28:10 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:28:24 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:28:38 PM</td>
+				<td class='step-details'>
+						User Click on login button
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>11:28:38 PM</td>
+				<td class='step-details'>
+						Scenario Passed.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 22, 2025 11:22:40 PM</td>
+										<td class='linked' test-id='31'>Then Click on Two thousand tewntyfour dropdown and verify</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/app-root[1]/app-home[1]/div[1]/div[1]/div[1]/app-dashboard[1]/div[1]/div[1]/div[2]/div[1]/div[1]/ng-select[1]/div[1]/span[2]"}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d0cb8553dff433dc3e2c52c88e3a6cdc, findElement {value=/html[1]/body[1]/app-root[1]/app-home[1]/div[1]/div[1]/div[1]/app-dashboard[1]/div[1]/div[1]/div[2]/div[1]/div[1]/ng-select[1]/div[1]/span[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55520}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55520/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d0cb8553dff433dc3e2c52c88e3a6cdc
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Actions.DashboardActions.verifyTwothousandtwentyfour(DashboardActions.java:291)
+	at com.Capium.StepDefination.DashboardStepDefination.click_on_two_thousand_tewntyfour_dropdown_and_verify(DashboardStepDefination.java:130)
+	at ✽.Click on Two thousand tewntyfour dropdown and verify(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Dashboard.feature:105)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 22, 2025 11:21:42 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 22, 2025 11:28:49 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 07 06.443</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Engineer</td>
+								<td>Test</td>
+							</tr>
+							<tr>
+								<td>Project</td>
+								<td>CucumberProjectDemo</td>
+							</tr>
+							<tr>
+								<td>Browser</td>
+								<td>Google Chrome</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 4,
+				passParent: 2,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 3,
+				passChild: 2,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 27,
+				passGrandChild: 26,
+				failGrandChild: 1,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Verify Dashboard":419.832,"Scenario: verify Monthly Submitted Return(s) This financial year dropdown":27.763,"Scenario: verify Monthly Submitted Return(s) This financial year dropdown":29.644,"Scenario: verify Monthly Submitted Return(s) This financial year dropdown":150.717
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>
