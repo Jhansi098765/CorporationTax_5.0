@@ -130,7 +130,7 @@ public void select_this_week_from_dropdown_from_export() {
 
 @Given("Click on Excel of Export screen")
 public void click_on_excel_of_export_screen() throws InterruptedException {
-	 importexportpermissions.mousehoverExcel();
+	 importexportpermissions.clickExcelInExport();
 }
 
 @Given("Click on export button of Export Screen")
@@ -192,6 +192,10 @@ public void click_on_pdf_of_export_screen() throws InterruptedException {
 @Given("Click on USERS radiobutton of import")
 public void click_on_users_radiobutton_of_import() throws InterruptedException {
 	importexportpermissions.ClickUsersRadioButtonInImport();
+}
+@Given("Click on clients radiobutton of export")
+public void click_on_clients_radiobutton_of_export() {
+	importexportpermissions.ClientsRadiobuttoninExport();
 }
 
 

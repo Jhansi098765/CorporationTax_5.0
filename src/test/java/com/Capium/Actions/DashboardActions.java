@@ -419,4 +419,13 @@ Thread.sleep(3000);
 			
 			  HelperClass.validatePageText(driver,"Subject",By.xpath("//th[.//div[text()='Subject']]"));
 		  }
+		  public void capiumlogo() throws InterruptedException, IOException {
+			  HelperClass.waitForPageToLoad(driver);
+			  HelperClass.waitUntilVisible(HelperClass.getWait(), DashBoard.capiumlogo);
+				HelperClass.waitUntilClickable(HelperClass.getWait(), DashBoard.capiumlogo);
+				HelperClass.ClickUsingJS(HelperClass.getDriver(), DashBoard.capiumlogo);
+				Thread.sleep(5000);
+			HelperClass.captureScreenshot("All modules");
+//			  HelperClass.validatePageText(driver,"Bookkeeping",By.xpath("(//h6[normalize-space(text())='Bookkeeping'])[1]"));
+}
 }

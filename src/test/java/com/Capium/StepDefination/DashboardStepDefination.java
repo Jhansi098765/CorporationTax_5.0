@@ -61,10 +61,10 @@ public void click_on_save_of_document_template() throws InterruptedException {
 //	Dashboard.click
 //}
 
-@Then("Validate the Cicon")
-public void validate_the_cicon() throws InterruptedException {
-	Dashboard.validateCiconfields();
-}
+//@Then("Validate the Cicon")
+//public void validate_the_cicon() throws InterruptedException {
+//	Dashboard.validateCiconfields();
+//}
 
 @Given("Click on Ticketicon")
 public void click_on_ticketicon() throws InterruptedException {
@@ -193,9 +193,15 @@ public void click_on_two_thousand_fifteen_dropdown_and_verify() throws Interrupt
 public void click_on_history_icon() throws InterruptedException {
 	Dashboard.history();
 }
-
+@Given("Click on Capiumlogo and validate")
+public void click_on_capiumlogo_and_validate() throws InterruptedException, IOException {
+	Dashboard.capiumlogo();
+}
 
 }
+
+
+
 
 
 

@@ -20,12 +20,12 @@ public class Capital_AllowancesStepDefination {
 	
 	@Given("Search a client and verify")
 	public void search_a_client_and_verify() throws InterruptedException {
-		capitalallowances.SearchTextfield();
+		capitalallowances.SearchTextfield("vijith");
 	}
 
 	@Given("Select particular client")
 	public void select_particular_client() {
-		capitalallowances.Client();
+		capitalallowances.Client("vijith");
 	}
 
 	@Given("Select CT600 Return")
@@ -845,6 +845,22 @@ public void click_on_main_pool_of_save_button() {
 public void click_on_main_pool_of_cancelchanges() {
 	capitalallowances.MainpoolOFCancelchanges();
 }
+@Given("Click on Assert Summary Of structure and buildings")
+public void click_on_assert_summary_of_structure_and_buildings() {
+	capitalallowances.AssertSummaryforstructureandbuildings();
+}
+
+@Given("Click and Verify CT600 Computation of structure and buildings")
+public void click_and_verify_ct600_computation_of_structure_and_buildings() throws InterruptedException {
+	capitalallowances.CT600Computationforstructureandbuildings();
+}
+
+@Given("Click on Enhanced Expenditure of strcutures and buildings")
+public void click_on_enhanced_expenditure_of_strcutures_and_buildings() throws InterruptedException {
+	capitalallowances.EnhancedExpenditureInmainFormforstructureandbuildings();
+}
+
+
 
 
 }

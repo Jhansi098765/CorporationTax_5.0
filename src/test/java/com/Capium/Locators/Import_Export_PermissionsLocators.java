@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class Import_Export_PermissionsLocators {
 
-	@FindBy(xpath = "//span[text()='Manage']/parent::a")
+	@FindBy(xpath = "//span[normalize-space()='Manage']")
 	@CacheLookup
 	public WebElement Manage;
    
@@ -50,13 +50,13 @@ public class Import_Export_PermissionsLocators {
 	@FindBy(xpath="(//span[@class='mat-radio-outer-circle'])[14]")
 	public WebElement ViewAccess;
 	
-	@FindBy(xpath="//span[@class='mat-button-wrapper' and normalize-space(text())='Save']")
+	@FindBy(xpath="//span[normalize-space(text())='Save']/parent::button")
 	public WebElement SaveButton;
 	
-	@FindBy(xpath="//span[@class='mat-button-wrapper' and normalize-space(text())='Save and Exit']")
+	@FindBy(xpath="//span[normalize-space(text())='Save and Exit']/parent::button")
 	public WebElement SaveAndExitButton;
 	
-	@FindBy(xpath="//span[@class='mat-button-wrapper' and normalize-space(text())='Cancel Changes']")
+	@FindBy(xpath="//span[normalize-space(text())='Cancel Changes']/parent::button")
 	public WebElement CancelChanges;
 	
 	@FindBy(xpath="//input[@id='mat-radio-33-input']")
@@ -68,7 +68,7 @@ public class Import_Export_PermissionsLocators {
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/app-home[1]/div[1]/div[1]/div[1]/app-settings[1]/div[1]/div[1]/app-import-settings[1]/div[1]/div[1]/div[3]/div[1]/mat-radio-group[1]/div[1]/div[1]/mat-radio-button[1]/div[1]/div[1]/input[1]")
 	public WebElement ClientsRadioButtonInIMPORT;
 	
-	@FindBy(xpath="/html[1]/body[1]/app-root[1]/app-home[1]/div[1]/div[1]/div[1]/app-settings[1]/div[1]/div[1]/app-export-settings[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/mat-checkbox[1]/div[1]/div[1]/input[1]")
+	@FindBy(xpath="(//mat-checkbox//input[@type='checkbox'])[1]")
 	public WebElement ClientsRadioButtonInEXPORT;
 	
 	@FindBy(xpath="//button[normalize-space(.)='Next']")

@@ -1,6 +1,7 @@
 package com.Capium.StepDefination;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 import com.Capium.Actions.ManageActions;
 
@@ -12,7 +13,7 @@ public class ManagesStepdefinations {
 	ManageActions manageactions = new ManageActions();
 
 @Given("Click on ManageDashboard")
-public void click_on_manage_dashboard() throws InterruptedException {
+public void click_on_manage_dashboard() throws InterruptedException, TimeoutException {
    manageactions.verifyandselectmanage();
 }
 
@@ -22,7 +23,7 @@ public void click_on_manage_dashboard() throws InterruptedException {
 	}
 
 	@Then("verify and select users")
-	public void verify_and_select_users() throws InterruptedException {
+	public void verify_and_select_users() throws InterruptedException, TimeoutException {
 		manageactions.verifyandSelectUsers();
 	}
 
@@ -45,7 +46,7 @@ public void click_on_manage_dashboard() throws InterruptedException {
 //users creation
 
 	@When("Click on users option")
-	public void click_on_users_option() throws InterruptedException {
+	public void click_on_users_option() throws InterruptedException, TimeoutException {
 		manageactions.verifyandSelectUsers();
 	}
 
@@ -54,10 +55,10 @@ public void click_on_manage_dashboard() throws InterruptedException {
 		manageactions.clickAdduser();
 	}
 
-	@When("Enter name in first name textfield")
-	public void enter_name_in_first_name_textfield() throws InterruptedException {
-		manageactions.verifyandSelectfirstname();
-	}
+//	@When("Enter name in first name textfield")
+//	public void enter_name_in_first_name_textfield() throws InterruptedException, TimeoutException {
+//		manageactions.verifyandSelectfirstname("divya");
+//	}
 
 	@When("Enter mail in email textfield")
 	public void enter_mail_in_email_textfield() throws InterruptedException {
@@ -67,7 +68,7 @@ public void click_on_manage_dashboard() throws InterruptedException {
 	//user deletion
 	@When("Click on Save and Invite")
 	public void click_on_save_and_invite() throws InterruptedException {
-		manageactions.clicksaveandInvite();
+		manageactions.clickSaveAndInvite();
 	}
 	@Given("Click on id checkbox")
 	public void click_on_id_checkbox() throws InterruptedException {
@@ -111,7 +112,7 @@ public void click_on_manage_dashboard() throws InterruptedException {
 
 	@Then("Click on delete button")
 	public void click_on_delete_button() throws InterruptedException {
-		manageactions.ClickonDelete();
+		manageactions.mousehoverdelete();
 	}
 	// export as excel
 	@Then("Click on Export as excel")
@@ -299,13 +300,104 @@ public void click_on_manage_dashboard() throws InterruptedException {
        manageactions.ThisDayDropdown();
     }
 
+    @Then("Enter firstmiddleand lastname")
+    public void enter_firstmiddleand_lastname() throws InterruptedException, TimeoutException {
+    	manageactions.verifyAndEnterfirstmiddleandlastname("sre", "swathi", "devi", "swathi@gmail.com");
+    }
+
+@Then("Select Administrator from dropdown")
+public void select_administrator_from_dropdown() throws InterruptedException {
+	manageactions.selectadministratorfromdropdown();
+}
+
+@Then("Select business dropdown as postal")
+public void select_business_dropdown_as_postal() throws InterruptedException {
+	manageactions.SelectbusinessdropdownfromUsers();
+
+}
+@Then("Enter Addresss and city and country")
+public void enter_addresss_and_city_and_country() throws InterruptedException {
+	manageactions.verifyAndEnterAddressDetails("123 Maple Street","Springfield", "Clark County");
+}
+
+//@Then("Select country name")
+//public void select_country_name() throws InterruptedException {
+//	manageactions.SelectCountryFromUsers();
+//}
+
+@Then("Enter postal Zipcode")
+public void enter_postal_zipcode() {
+	manageactions.enterPostalCode("90210");
+}
+
+@Then("Click on SaveButtonInUsers")
+public void click_on_save_button_in_users() {
+	manageactions.clickSaveButtonInusers();
+}
+
+@Then("Click on Saveandexit button in users")
+public void click_on_saveandexit_button_in_users() {
+	manageactions.clickSaveAndExit();
+}
+
+@Then("Click on Cancel changes button in users")
+public void click_on_cancel_changes_button_in_users() {
+	manageactions.clickCancelchanges();
+}
+
+@Then("Select RegularUser from dropdown")
+public void select_regular_user_from_dropdown() throws InterruptedException {
+	manageactions.selectRegularUser();
+}
+
+@Then("Select Manager from dropdown")
+public void select_manager_from_dropdown() throws InterruptedException {
+	manageactions.selectManager();
+}
+@Then("select user and validate")
+public void select_user_and_validate() {
+	manageactions.validateFirstUserIsActive();
+}
 
 
+@Then("Enter firstname and email")
+public void enter_firstname_and_email() throws InterruptedException, TimeoutException {
+	manageactions.verifyAndEnterfirstnameandemail("Shivani","Shivani@gmail.com");
+}
 
+@When("click on status all dropdown")
+public void click_on_status_all_dropdown() throws InterruptedException {
+	manageactions.verifyStatusAlldropdown();
+}
 
+//@When("click on active")
+//public void click_on_active() throws InterruptedException {
+//	manageactions.
+//}
 
+@When("click on Resend invitation")
+public void click_on_resend_invitation() throws InterruptedException {
+	manageactions.Resendinvitation();
+}
 
+@When("click on invite")
+public void click_on_invite() throws InterruptedException {
+	manageactions.Invite();
+}
 
+@When("click on archieved")
+public void click_on_archieved() throws InterruptedException {
+	manageactions.Archieved();
+}
+
+@Then("Click on delete button for no option")
+public void click_on_delete_button_for_no_option() throws InterruptedException {
+	manageactions.mousehoverdeletefornooption();
+}
+@Then("Click on UserCheckboxinUsers")
+public void click_on_user_checkboxin_users() throws InterruptedException {
+	manageactions.UsersCheckboxInusers();
+}
 
 
 }

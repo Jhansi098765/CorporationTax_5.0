@@ -10,10 +10,10 @@ import com.Capium.Utilites.HelperClass;
 public class ManageLocators {
 
 
-	@FindBy(xpath="//span[text()='Manage']/parent::a")
+	@FindBy(xpath="//span[normalize-space()='Manage']")
 	public WebElement Manage;
 	
-	@FindBy(xpath = "//mat-icon[@title='Clients']//parent::div")
+	@FindBy(xpath = "(//span[normalize-space()='Clients'])[1]")
 	@CacheLookup
 	public WebElement Clients;
 	
@@ -42,13 +42,13 @@ public class ManageLocators {
 	public WebElement adduser;
 	
 	@FindBy(xpath="//input[@formcontrolname='firstName']")
-	public WebElement firstname;
+	public WebElement firstmiddleandlastname;
 	
 
-	@FindBy(xpath="//input[@type='email']")
-	public WebElement email;
+	@FindBy(xpath="//input[@formcontrolname='email']")
+	public WebElement emailtextfield;
 	
-	@FindBy(xpath="//span[text()=' Save and Invite ']/parent::button")
+	@FindBy(xpath="//span[normalize-space()='Save and Invite']")
 	public WebElement saveandinvite;
 	
 	
@@ -81,13 +81,13 @@ public class ManageLocators {
 	@FindBy(xpath="//mat-icon[normalize-space()='more_vert']")
 	public WebElement kebab ;
 	
-	@FindBy(xpath="//mat-icon[normalize-space()='border_all']")
+	@FindBy(xpath="//span[normalize-space()='Export to Excel']")
 	public WebElement exporttoexcel ;
 	
-	@FindBy(xpath="//mat-icon[text()='description']/parent::button[contains(text(), 'Export to CSV')]")
+	@FindBy(xpath="//span[normalize-space()='Export to CSV']")
 	public WebElement exporttoCSV ;
 	
-	@FindBy(xpath="//button[@name='PDF']")
+	@FindBy(xpath="//span[normalize-space()='Export to PDF']")
 	public WebElement exporttoPDV ;
 	
 	@FindBy(xpath="//input[@id='mat-checkbox-8-input']/parent::span")
@@ -235,6 +235,43 @@ public class ManageLocators {
 	
 	@FindBy(xpath="(//mat-icon[normalize-space(text())='close'])[2]")
 	public WebElement CloseIconInEditPermission ;
+	
+	@FindBy(xpath="//ng-select[@formcontrolname='permissions']")
+	public WebElement PermissionsDropdowninUsers;
+	
+	@FindBy(xpath="//ng-select[@formcontrolname='addressType']")
+	public WebElement BusinessdropdowninUsers;
+	
+	@FindBy(xpath="(//ng-select[@formcontrolname='country'])[2]")
+	public WebElement CountrydropdownInusers;
+	
+	@FindBy(xpath="//span[normalize-space()='Save']")
+	public WebElement SaveButtonInUsers;
+	
+	@FindBy(xpath="//span[normalize-space()='Save']")
+	public WebElement SaveandExitbuttoninusers;
+	
+	@FindBy(xpath="//span[normalize-space()='Cancel Changes']")
+	public WebElement CancelchangesButton;
+	
+	
+	@FindBy(xpath="//ng-dropdown-panel//span[normalize-space(text())='Active']")
+	public WebElement ActiveInstatusalldropdown;
+	
+	@FindBy(xpath="//ng-dropdown-panel//span[normalize-space(text())='Resend Invitation']")
+	public WebElement ResendInvitationInstatusalldropdown;
+	
+	@FindBy(xpath="//ng-dropdown-panel//span[normalize-space(text())='Invite']")
+	public WebElement InviteInstatusalldropdown;
+	
+	@FindBy(xpath="//ng-dropdown-panel//span[normalize-space(text())='Archived']")
+	public WebElement ArchivedInstatusalldropdown;
+	
+	@FindBy(xpath="//span[normalize-space(text())='Status-All']/ancestor::ng-select//span[@class='ng-arrow-wrapper']")
+	public WebElement Statusalldropdown;
+	
+	@FindBy(xpath="//table/tbody/tr[1]/td[1]//mat-checkbox")
+	public WebElement UserCheckboxinUsers;
 }
 
 

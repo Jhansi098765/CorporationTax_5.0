@@ -313,6 +313,261 @@ public class TradingandDormantLocator {
 	
 	@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
 	public WebElement AssertSummaryForadditionandaiafortradinganddormantperiod;
+	
+	@FindBy(xpath="//button[@aria-label='1 March 2023']")
+	public WebElement Datefortradinganddormant;
+	
+
+	@FindBy(xpath="//mat-checkbox[.//span[contains(text(), 'First Year Allowance at 100%')]]//input")
+	public WebElement FirstYearAllowanceatHundredPercentCheckboxfortrading;
+	
+	@FindBy(xpath="//input[@formcontrolname='additions']")
+	public WebElement Additionsfortrading;
+	
+	
+
+	
+	
+	
+	
+	
+	
+
+@FindBy(xpath="//a[.//p[text()='Page 9'] and contains(normalize-space(.), 'Capital allowances and Balancing charges')]")
+public WebElement CapitalallowancesandBalancingchargesinMainformfortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryadditionalanddisposalwithbusinessclosedforelectricchargevehiclepointsfortrading;
+
+@FindBy(xpath="//a[starts-with(normalize-space(), 'CT600 Computation')]/ancestor::li")
+public WebElement CT600computationadditionalanddisposalwithbusinessclosedforelectricchargevehiclepointsfortrading;
+
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryfornoclaimelectricchargevehiclepointsfortrading;
+
+@FindBy(xpath="//a[starts-with(normalize-space(), 'CT600 Computation')]/ancestor::li")
+public WebElement CT600computationfornoclaimelectricchargevehiclepointsfortrading;
+
+
+@FindBy(xpath="//label[normalize-space()='No Claim']/parent::div//input[@type='checkbox']")
+public WebElement NoClaimcheckbox1fortrading;
+
+@FindBy(xpath="//a[.//p[text()='Page 9'] and contains(normalize-space(.), 'Capital allowances and Balancing charges')]")
+public WebElement CapitalallowancesandBalancingchargesinMainformfornoclaimfortrading;
+
+@FindBy(xpath="//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")
+public WebElement AssetCategoryforenterpriseZonefortrading;
+
+@FindBy(xpath="//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")
+public WebElement AssetCategoryforZeroemissionsgoodsvehiclefortrading;
+
+@FindBy(xpath="//a[.//p[text()='Page 9'] and contains(normalize-space(.), 'Capital allowances and Balancing charges')]")
+public WebElement CapitalallowancesandBalancingchargesinMainformforZeroemissionsgoodsvehiclefortrading;
+
+@FindBy(xpath="//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")
+public WebElement AssetCategoryforZeroemissionsCarsfortrading;
+
+@FindBy(xpath="//a[.//p[text()='Page 9'] and contains(normalize-space(.), 'Capital allowances and Balancing charges')]")
+public WebElement CapitalallowancesandBalancingchargesinMainformforZeroemissionsgoodsCarsfortrading;
+
+@FindBy(xpath="//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")
+public WebElement AssetCategoryforDesignatedenhnacedallowancefortrading;
+
+@FindBy(xpath="//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")
+public WebElement AssetCategoryforShortlifeassetfortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforshortlifeassetofwdvamountfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforshortlifeassetofwdvamountfortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforshortlifeassetofadditionamountfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforshortlifeassetofadditionamountfortrading;
+
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforrestrictionandadditionamountfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforrestrictionandadditionamountfortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforrestrictionandadditionamountforspecialratepoolfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforrestrictionandadditionamountforspecialratepoolfortrading;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureforspecialratepoolfortrading;
+
+@FindBy(xpath="//mat-checkbox[.//span[normalize-space(text())='Super deduction at 130%']]")
+public WebElement superdeductionatONETHIRTYpercentfortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforSuperdeductionfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforSuperdeductionfortrading;
+
+@FindBy(xpath="//a[contains(text(),'CT-25')]")
+public WebElement CT600return2fortrading;
+
+@FindBy(xpath="(//mat-form-field[@appearance='fill'])[1]")
+public WebElement Assetacquisitiondateforsuperdeductionfortrading;
+
+@FindBy(xpath="//a[contains(text(),'CT-13')]")
+public WebElement CT600return3fortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforwdvandrestrictionamountfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforwdvandrestrictionamountfortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforadditionandnoclaimfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforadditionandnoclaimfortrading;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureInMainformforsuperdeductionfortrading;
+
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforadditionforassetisacarfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforadditionforassetisacarfortrading;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureInMainformforassetisacarfortrading;
+
+@FindBy(xpath="//input[@id=//label[normalize-space(.)='75g/Km or less']/@for]")
+public WebElement AssetIsaCarBetween75gkmorlessfortrading;
+
+@FindBy(xpath="(//mat-form-field[@appearance='fill'])[1]")
+public WebElement Assetacquisitiondateforfullexpensingfortrading;
+
+@FindBy(xpath="//input[@id=//label[normalize-space(.)='Full Expensing (FYA 100%)']/@for]")
+public WebElement fullexpensingfortrading;
+
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement Assetsummaryforfullexpensingfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforfullexpensingfortrading;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureInMainformforfullexpensingfortrading;
+
+@FindBy(xpath="//button[.//mat-icon[normalize-space(text())='more_vert']]")
+public WebElement kebabiconforcapitalallowancefortrading;
+
+@FindBy(xpath="//button[.//span[normalize-space(text())='Asset wise details']]")
+public WebElement AssetwiseDetailsfortrading;
+
+@FindBy(xpath="//button[.//span[normalize-space(text())='Pool wise details']]")
+public WebElement poolwisedetailsfortrading;
+
+@FindBy(xpath="//span[normalize-space()='Save']")
+public WebElement Savebuttonforcapitalallowancefortrading;
+
+@FindBy(xpath="//span[normalize-space()='Cancel Changes']")
+public WebElement CancelChangesforcapitallowancefortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement Assetsummaryforstructureandbuildingsfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationforstructureandbuildingsfortrading;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureInMainformforstructureandbuildingsfortrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement AssertSummaryforElectricVehicleChargePointsfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationofelectricvehiclechchargepointsfortradinganddormant;
+
+@FindBy(xpath="//td[normalize-space(text())='Transfer from SLA to Main Pool']")
+public WebElement TransferfromSLAtoMainPoolfortrading;
+
+@FindBy(xpath="//a[normalize-space(.)='Page 9 Capital allowances and Balancing charges']")
+public WebElement CapitalallowancesAndBalancingChargeInMainFormfortrading;
+
+@FindBy(xpath="//input[@formcontrolname='assetDisposedDate']")
+public WebElement AssetDisposedDatefortrading;
+
+
+@FindBy(xpath="//input[@formcontrolname='disposalProceeds']")
+public WebElement DisposalAmountfortrading;
+
+@FindBy(xpath="//input[@id=//label[normalize-space(span)='Business Closed']/@for]")
+public WebElement BusinessclosedCheckboxfortrading;
+
+@FindBy(xpath="//a[normalize-space(.)='Page 9 Capital allowances and Balancing charges']")
+public WebElement CapitalallowancesAndBalancingChargeInMainForm2fortrading;
+
+@FindBy(xpath="//label[normalize-space()='No Claim']/parent::div//input[@type='checkbox']")
+public WebElement NoClaimcheckboxfortrading;
+
+@FindBy(xpath="//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")
+public WebElement AssetCategoryforenterpriseZonefortradinganddormant;
+
+@FindBy(xpath="//a[normalize-space(.)='Page 9 Capital allowances and Balancing charges']")
+public WebElement CapitalallowancesAndBalancingChargeInMainForm2fortradingforenterpisezone;
+
+@FindBy(xpath="(//mat-form-field[@appearance='fill'])[1]")
+public WebElement AssetacquisitiondateoftradingandDormantperiodforelectricchargeandvehicles;
+
+@FindBy(xpath="(//mat-form-field[@appearance='fill'])[1]")
+public WebElement AssetacquisitiondateoftradingandDormantperiodforshortlifeasset;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureforshortlifeassetoftrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement Assetsummaryforshortlifeassetforadditions;
+
+@FindBy(xpath="//td[normalize-space(text())='Transfer from SLA to Main Pool']")
+public WebElement TransferfromSLAtoMainPoolfortrading1;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationofclaimsmallpoolallowancefortrading;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureforClaimsmallpoolallowanceoftrading;
+
+@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+public WebElement Assetsummaryforbusinessclosedcheckboxfortrading;
+
+@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+public WebElement CT600computationofbusinessclosedcheckboxfortrading;
+
+@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+public WebElement EnhancedEXpenditureforbusinessclosedcheckboxfortrading;
+
+@FindBy(xpath="(//span[normalize-space(text())='Other Charges and Allowances']/parent::div)[1]")
+public WebElement OtherChargesAndAlloawncesfortrading;
+
+
+@FindBy(xpath="(//mat-form-field[@appearance='fill'])[1]")
+public WebElement AssetacquisitiondateoftradingandDormantperiodforotherhchargesandallowances;
+
+@FindBy(xpath="//a[normalize-space(.)='Page 9 Capital allowances and Balancing charges']")
+public WebElement CapitalallowancesAndBalancingChargeforotherchargesandallowancesformainform3;
+
+@FindBy(xpath="//a[normalize-space(.)='Page 9 Capital allowances and Balancing charges']")
+public WebElement CapitalallowancesAndBalancingChargeforotherchargesandallowancesformainform2;
+
 }
 
 

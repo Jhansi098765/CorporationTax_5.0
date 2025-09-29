@@ -72,8 +72,8 @@ Background: User login
   
    
    
-   #Scenario: verifying the C_icon
-   #Given Click on C_icon and validate
+   Scenario: verifying the Cpaiumlogo
+   Given Click on Capiumlogo and validate
    #Then Validate the Cicon
    
    #Scenario: verifying the Ticketicon
@@ -108,8 +108,8 @@ Background: User login
    #Then Click on Two thousand fifteen dropdown and verify  
    
    
-  Scenario: Verify History
-  Given  Click on History icon
+  #Scenario: Verify History
+  #Given  Click on History icon
   #And Click on Logo on Tax Document of settings
   #And Click on Enable/Disable Report Logo checkbox
   #And Click on Save of Logo on Tax Document of settings

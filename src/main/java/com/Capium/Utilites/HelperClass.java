@@ -6,12 +6,14 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -37,7 +39,7 @@ public class HelperClass {
  
 	private static WebDriver driver;
 	private static WebDriverWait wait;
-	public final static int TIMEOUT = 5;
+	public final static int TIMEOUT = 10;
 	private static String screenshotDirectory = "screenshots/";
 	   private HelperClass() {
  
@@ -809,7 +811,7 @@ public static void clickWithRetry(WebElement element, WebDriver driver, WebDrive
 }
  
 public static void waitForPageToLoad(WebDriver driver) {
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	try {
 		wait.until(webDriver -> (Boolean) js.executeScript("return (window.angular !== undefined) && "
@@ -1142,12 +1144,334 @@ public static void validateAndVerify(By locator, String string) {
 	            } catch (Exception e) {
 	                throw new AssertionError("Failed to validate page text. Error: " + e.getMessage());
 	            }
-	        
-	    
-	    }
-	    
-	    
+	           
+	        }
+	    	public static void selectCheckboxAndValidateRate(String checkboxLabelText, String expectedWDARate) {
+	    	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	     
+	    	    // 1. Locate label and click
+	    	    WebElement checkboxLabel = driver.findElement(
+	    	        By.xpath("//span[normalize-space(text())='" + checkboxLabelText + "']")
+	    	    );
+	    	    new Actions(driver).moveToElement(checkboxLabel).click().perform();
+	     
+	    	    // 2. Find the input inside this checkbox
+	    	    WebElement checkboxInput = driver.findElement(
+	    	        By.xpath("//span[normalize-space(text())='" + checkboxLabelText + "']/ancestor::mat-checkbox//input[@type='checkbox']")
+	    	    );
+	     
+	    	    // 3. Dispatch Angular events
+	    	    js.executeScript(
+	    	        "arguments[0].checked = true;" +
+	    	        "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+	    	        "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+	    	        checkboxInput
+	    	    );
+	     
+	    	    // 4. Verify checkbox is selected
+	    	    wait.until(ExpectedConditions.elementToBeSelected(checkboxInput));
+	    	    System.out.println("Checkbox '" + checkboxLabelText + "' selected? " + checkboxInput.isSelected());
+	     
+	    	    // 5. Capture expected + actual WDARate
+	    	    WebElement wdaRate = driver.findElement(By.xpath("//input[@formcontrolname='WDARate']"));
+	    	    double expectedVal = Double.parseDouble(expectedWDARate);
+	     
+	    	    // Wait for WDARate field to be populated (not empty)
+	    	    wait.until(driver1 -> {
+	    	        String val = (String) js.executeScript("return arguments[0].value;", wdaRate);
+	    	        return val != null && !val.trim().isEmpty();
+	    	    });
+	     
+	    	    // Get the final actual rate value
+	    	    String actualRate = (String) js.executeScript("return arguments[0].value;", wdaRate);
+	    	    String numeric = actualRate.replaceAll("[^0-9.\\-]", "");
+	    	    double finalVal = Double.parseDouble(numeric);
+	     
+	    	    System.out.println("Final WDARate after selecting '" + checkboxLabelText + "' = " + finalVal);
+	     
+	    	    // 6. Assertion logic
+	    	    if (Math.abs(finalVal - expectedVal) < 0.0001) {
+	    	        //Pass test
+	    	        Assert.assertTrue(true, "WDARate updated correctly to " + expectedVal);
+	    	    } else {
+	    	        //Fail fast with clear message
+	    	        Assert.fail("WDARate mismatch! Expected " + expectedVal + " but found " + finalVal + " after selecting '" + checkboxLabelText + "'");
+	    	    }
+	    	}    
+	    	    public static void validateCheckboxes(WebDriver driver,
+                        List<String> expectedEnabled,
+                        List<String> ignoreList) {
+
+List<WebElement> matCheckboxes = driver.findElements(By.cssSelector("mat-checkbox"));
+Set<String> seenLabels = new HashSet<>();
+
+for (WebElement matCheckbox : matCheckboxes) {
+List<WebElement> labelSpans = matCheckbox.findElements(By.cssSelector("label span"));
+if (labelSpans.isEmpty()) continue;
+
+String labelText = labelSpans.get(0).getText().trim();
+if (labelText.isEmpty()) continue;
+
+if (ignoreList.contains(labelText)) {
+continue; // skip ignored
+}
+
+seenLabels.add(labelText);
+
+boolean isActuallyEnabled = !matCheckbox.getAttribute("class")
+  .contains("mat-mdc-checkbox-disabled");
+
+System.out.println("Checkbox: " + labelText + " | Enabled: " + isActuallyEnabled);
+
+if (expectedEnabled.contains(labelText)) {
+if (isActuallyEnabled) {
+  System.out.println("✅ Passed: " + labelText + " is enabled");
+} else {
+  throw new AssertionError("❌ Failed: " + labelText + " should be enabled but is disabled");
+}
+} else {
+if (!isActuallyEnabled) {
+  System.out.println("✅ Passed: " + labelText + " is disabled");
+} else {
+  throw new AssertionError("❌ Failed: " + labelText + " should be disabled but is enabled");
+}
+}
+}
+
+for (String expected : expectedEnabled) {
+if (!seenLabels.contains(expected)) {
+throw new AssertionError("❌ Failed: Expected checkbox '" + expected + "' not found in DOM!");
+
+}
+}
+}
+
+//public static void selectCheckboxAndValidateRate(String checkboxLabelText, String expectedWDARate) {
+//    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//    JavascriptExecutor js = (JavascriptExecutor) driver;
+//
+//    // 1. Locate label and click
+//    WebElement checkboxLabel = driver.findElement(
+//        By.xpath("//span[normalize-space(text())='" + checkboxLabelText + "']")
+//    );
+//    new Actions(driver).moveToElement(checkboxLabel).click().perform();
+//
+//    // 2. Find the input inside this checkbox
+//    WebElement checkboxInput = driver.findElement(
+//        By.xpath("//span[normalize-space(text())='" + checkboxLabelText + "']/ancestor::mat-checkbox//input[@type='checkbox']")
+//    );
+//
+//    // 3. Dispatch Angular events
+//    js.executeScript(
+//        "arguments[0].checked = true;" +
+//        "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+//        "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+//        checkboxInput
+//    );
+//
+//    // 4. Verify checkbox is selected
+//    wait.until(ExpectedConditions.elementToBeSelected(checkboxInput));
+//    System.out.println("Checkbox '" + checkboxLabelText + "' selected? " + checkboxInput.isSelected());
+//
+//    // 5. Now wait for WDARate to become expected (numeric comparison)
+//    WebElement wdaRate = driver.findElement(By.xpath("//input[@formcontrolname='WDARate']"));
+//    double expectedVal = Double.parseDouble(expectedWDARate);
+//
+//    wait.until(driver1 -> {
+//        Object raw = js.executeScript("return arguments[0].value;", wdaRate);
+//        String s = raw == null ? "" : raw.toString().trim();
+//        System.out.println("Polling WDARate -> '" + s + "'"); // debug
+//        if (s.isEmpty()) return false;
+//
+//        String numeric = s.replaceAll("[^0-9.\\-]", "");
+//        try {
+//            double val = Double.parseDouble(numeric);
+//            return Math.abs(val - expectedVal) < 0.0001;
+//        } catch (NumberFormatException ex) {
+//            return false;
+//        }
+//    });
+// 
+//    // 6. Final value check
+//    String actualRate = (String) js.executeScript("return arguments[0].value;", wdaRate);
+//    System.out.println("Final WDARate after selecting '" + checkboxLabelText + "' = " + actualRate);
+//
+//    String numeric = actualRate.replaceAll("[^0-9.\\-]", "");
+//    double finalVal = Double.parseDouble(numeric);
+//
+//    Assert.assertEquals(finalVal, expectedVal, 0.0001,
+//        " WDARate did not update correctly after selecting '" + checkboxLabelText + "'");
+//}
+//
+public static void selectCheckboxOnly(String checkboxLabelText) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
+    // 1. Locate label and click
+    WebElement checkboxLabel = driver.findElement(
+        By.xpath("//span[normalize-space(text())='" + checkboxLabelText + "']")
+    );
+    new Actions(driver).moveToElement(checkboxLabel).click().perform();
+
+    // 2. Find the checkbox input
+    WebElement checkboxInput = driver.findElement(
+        By.xpath("//span[normalize-space(text())='" + checkboxLabelText + "']/ancestor::mat-checkbox//input[@type='checkbox']")
+    );
+
+    // 3. Manually check the box via JavaScript (Angular-friendly)
+    js.executeScript(
+        "arguments[0].checked = true;" +
+        "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+        "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+        checkboxInput
+    );
+
+    // 4. Wait for checkbox to be selected
+    wait.until(ExpectedConditions.elementToBeSelected(checkboxInput));
+
+    // 5. Confirm
+    if (checkboxInput.isSelected()) {
+        System.out.println("✅ Checkbox '" + checkboxLabelText + "' is selected.");
+    } else {
+        throw new AssertionError("❌ Checkbox '" + checkboxLabelText + "' was not selected as expected.");
+    }
+
+}
+//
+//public static void waitForPageToLoad(WebDriver driver) {
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+//	JavascriptExecutor js = (JavascriptExecutor) driver;
+//	try {
+//		wait.until(webDriver -> (Boolean) js.executeScript("return (window.angular !== undefined) && "
+//				+ "(angular.element(document).injector() !== undefined) && "
+//				+ "(angular.element(document).injector().get('$http').pendingRequests.length === 0);"));
+//	} catch (Exception e) {
+//		//Log.warn("Angular wait skipped: " + e.getMessage());
+//	}
+//Click 
+public static boolean safeClick(WebElement element, String logMessage) {
+    for (int i = 0; i < 3; i++) {
+        try {
+            waitForPageToLoad(driver);
+                    wait.until(ExpectedConditions.elementToBeClickable(element));
+            try {
+                element.click();
+            } catch (ElementClickInterceptedException e) {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+            }
+            Log.info("Clicked: " + logMessage);
+            return true;
+        } catch (Exception e) { sleep(1000); }
+    }
+    Log.info("Failed to click: " + logMessage);
+    return false;
+
+
+//	wait.until(webDriver -> js.executeScript("return document.readyState").toString().equals("complete")));
+}
+
+
+//send Keys
+
+public static void safeType(WebElement element, String text, String logMessage) {
+	WebDriver driver = getDriver();
+	waitForPageToLoad(driver);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+	WebElement el = wait.until(ExpectedConditions.visibilityOf(element));
+	el.clear();
+	el.sendKeys(text);
+	Log.info("Typed in " + logMessage + ": " + text);
+}
+
+public static boolean isElementPresent(By locator) {
+	try {
+		WebElement element = getDriver().findElement(locator);
+		return element.isDisplayed();
+	} catch (NoSuchElementException | StaleElementReferenceException e) {
+		return false;
 	}
+}
+
+public static void takeScreenshot(WebDriver driver, String screenshotName) {
+    try {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+
+        String dest = System.getProperty("user.dir") + "/screenshots/" + screenshotName + ".png";
+        File destination = new File(dest);
+        FileUtils.copyFile(source, destination);
+
+        System.out.println(" Screenshot saved at: " + dest);
+    } catch (IOException e) {
+        System.err.println(" Failed to capture screenshot: " + e.getMessage());
+    }
+}
+
+public static void fastAngularClick(WebDriver driver, By locator, String name) {
+    try {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement el = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", el);
+        Thread.sleep(100);
+        try {
+            el.click();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+        }
+        System.out.println(" Clicked: " + name);
+        Assert.assertTrue(true, name + " clicked.");
+    } catch (Exception e) {
+        System.out.println(" Failed to click: " + name);
+        Assert.fail(name + " click failed: " + e.getMessage());
+    }
+}
+
+// ... other utility methods
+
+}
+
+//Mouse hover 
+
+//public static void hover(WebElement element, String log) {
+//	try {
+//		new Actions(getDriver()).moveToElement(waitUntilVisible(element)).perform();
+//		System.out.println("Hovered on: " + log);
+//	} catch (Exception e) {
+//		throw new RuntimeException("Failed to hover on: " + log, e);
+//	}
+//}
+//
+//}
+////Angular Date Picker
+//
+//public static void setDateAsText(WebDriver driver, WebElement element, String date) {
+//	waitForPageToLoad(driver);
+//
+//	DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]");
+//	DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//
+//	LocalDate parsedDate = LocalDate.parse(date, inputFormatter);
+//	String formattedDate = parsedDate.format(outputFormatter);
+//
+//	((JavascriptExecutor) driver).executeScript("arguments[0].value='';", element);
+//	element.clear();
+//	element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+//	element.sendKeys(Keys.DELETE);
+//
+//	element.sendKeys(formattedDate);
+//	element.sendKeys(Keys.TAB);
+//}
+//}
+
+
+	    	
+		
+			
+	     
+	    
+	    
+	
 
 	       
 	

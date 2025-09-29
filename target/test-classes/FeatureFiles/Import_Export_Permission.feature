@@ -23,46 +23,46 @@ Background: User login
   #When  Click on  Permissions
   #And Click on  Quickentry arrow
   #And Click on Calculator arrow
-  
+  #
   #Scenario: Expand Attachments in Quick entry section to view its permissions 
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
   #And Click on  Quickentry arrow
   #And Click on  Attachments arrow
- 
+ #
   #Scenario: Expand Reports in Quick entry section to view its permissions 
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
   #And Click on  Quickentry arrow
   #And Click on  Reportss arrow
- 
+ #
   #Scenario: Expand Manage section to view its permissions 
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
   #And Click on  Manage_arrow
-  
+  #
   #Scenario: Expand Calculator Section to view its permissions 
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
   #And Click on  CalculatorArrow
-  
+  #
   #Scenario: Verify search textfield in permissions
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
   #Then  Click on Search textfield and Enter the permission
-  
+  #
   #Scenario: Verify Savebutton
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
   #Then give permission access as view for managerAccess in QuickEntry
   #And Click on SaveButtton
-  
+  #
   #Scenario: Verify SaveAndExitButton
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
   #Then give permission access as view for managerAccess in QuickEntry
   #And Click on SaveAndExitButton
-  
+  #
   #Scenario: Verify CancelChangesButton
   #Given Click on ManageDashBoard
   #When  Click on  Permissions
@@ -79,494 +79,349 @@ Background: User login
   #And Click on save and Next of import
   
    #EXPORT AS EXCEL FOR CLIENTS
-   #Scenario: verify Download excel of client using ALL week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And  Select All  from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
    
-   Scenario: verify Download excel of client using This week data range
+   Scenario: verify Download excel of client using ALL week data range
    Given Click on ManageDashBoard
    And   Click on Export of manage screen
-   And   Select This week from dropdown from export
-   And Click on clients radiobutton of import  
+    And Click on clients radiobutton of export  
    And Click on Excel of Export screen
    And Click on export button of Export Screen
-   
-   Scenario: verify Download excel of client using Last week data range
-   Given Click on ManageDashBoard
-   And   Click on Export of manage screen
+    And   Select This week from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
    And   Select Last week from dropdown from export
-   And Click on clients radiobutton of import  
+   And Click on clients radiobutton of export  
    And Click on Excel of Export screen
-   And Click on export button of Export Screen
+   And Click on export button of Export Screen  
    
    Scenario: verify Download excel of client using THIS MONTH  data range
    Given Click on ManageDashBoard
    And   Click on Export of manage screen
    And   Select This month from dropdown from export
-   And Click on clients radiobutton of import  
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+   And   Select Last month from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+   And   Select This quarter from dropdown from export
+   And Click on clients radiobutton of export  
    And Click on Excel of Export screen
    And Click on export button of Export Screen
    
+ 
+   Scenario: verify Download excel of client using LAST QUARTER data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select Last quarter from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+    And   Select This year from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+    And   Select Last year from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+  
+  
+   Scenario: verify Download excel of client using CUSTOM data range
+   Given Click on ManageDashBoard
+   And  Click on Export of manage screen
+   And  Select custom from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+   
+   
+   #EXPORT AS CSV FOR CLIENTS
+   
+   Scenario: verify Download CSV of client using ALL week data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select All  from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+    And   Select This week from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+   And   Select Last week from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+  
+   
+   Scenario: verify Download CSV of client using THIS MONTH  data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select This month from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+    And   Select Last month from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+   And   Select This quarter from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+  
+  
+   Scenario: verify Download CSV of client using LAST QUARTER data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select Last quarter from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+    And   Select This year from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+     And   Select Last year from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+     And   Select custom from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+  
+    #EXPORT AS PDF
+   
+   Scenario: verify Download PDF of client using ALL week data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+    And   Select This week from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+    And   Select Last week from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   
+  
+  
    Scenario: verify Download excel of client using LAST MONTH data range
    Given Click on ManageDashBoard
    And   Click on Export of manage screen
    And   Select Last month from dropdown from export
-   And Click on clients radiobutton of import  
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select This quarter from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select Last quarter from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   
+   Scenario: verify Download excel of client using THIS YEAR data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select This year from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select Last year from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select custom from dropdown from export
+   And Click on clients radiobutton of export  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   
+   
+   
+   
+   #USERS
+    Scenario: verify Download excel of USERS using ALL week data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And Click on clients radiobutton of export  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+    And   Select This week from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+   And   Select Last week from dropdown from export
+   And Click on USERS radiobutton of import  
    And Click on Excel of Export screen
    And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of client using THIS QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This quarter from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using LAST QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last quarter from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using THIS YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This year from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using LAST YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last year from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using CUSTOM data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select custom from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #EXPORT AS CSV FOR CLIENTS
    
-   #Scenario: verify Download excel of client using ALL week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select All  from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using This week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This week from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using Last week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last week from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using THIS MONTH  data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This month from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using LAST MONTH data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last month from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using THIS QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This quarter from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using LAST QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last quarter from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using THIS YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This year from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using LAST YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last year from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of client using CUSTOM data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select custom from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
+   Scenario: verify Download excel of USERS using THIS MONTH  data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select This month from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+     And   Select Last month from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+   And   Select This quarter from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+ 
+ 
+   Scenario: verify Download excel of USERS using LAST QUARTER data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select Last quarter from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+    And   Select This year from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+     And   Select Last year from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
+  
+  
+   Scenario: verify Download excel of USERS using CUSTOM data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select custom from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on Excel of Export screen
+   And Click on export button of Export Screen
    
-   # EXPORT AS PDF
-   
-   #Scenario: verify Download excel of client using ALL week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select All  from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using This week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This week from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using Last week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last week from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using THIS MONTH  data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This month from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using LAST MONTH data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last month from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using THIS QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This quarter from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using LAST QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last quarter from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using THIS YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This year from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using LAST YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last year from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of client using CUSTOM data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select custom from dropdown from export
-   #And Click on clients radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #USERS
-    #Scenario: verify Download excel of USERS using ALL week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select All  from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using This week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This week from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using Last week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last week from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using THIS MONTH  data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This month from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using LAST MONTH data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last month from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using THIS QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This quarter from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using LAST QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last quarter from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using THIS YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This year from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using LAST YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last year from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using CUSTOM data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select custom from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on Excel of Export screen
-   #And Click on export button of Export Screen
-   #
    #EXPORT AS CSV FOR USERS
    
-   #Scenario: verify Download excel of USERS using ALL week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select All  from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using This week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This week from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using Last week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last week from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using THIS MONTH  data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This month from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using LAST MONTH data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last month from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using THIS QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This quarter from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using LAST QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last quarter from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using THIS YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This year from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using LAST YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last year from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
-   #
-   #Scenario: verify Download excel of USERS using CUSTOM data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select custom from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on CSV of Export screen
-   #And Click on export button of Export Screen
+   Scenario: verify Download CSV of USERS using ALL week data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+    And   Select This week from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+   And   Select Last week from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+ 
    
-   # EXPORT AS PDF
-   #
-   #Scenario: verify Download excel of USERS using ALL week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select All  from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
+   Scenario: verify Download CSV of USERS using THIS MONTH  data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select This month from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+     And   Select Last month from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+   And   Select This quarter from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+  
+   Scenario: verify Download excel of USERS using LAST QUARTER data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select Last quarter from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+   And   Select This year from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
+   And   Select Last year from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of USERS using This week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This week from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of USERS using Last week data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last week from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
+   Scenario: verify Download CSV of USERS using CUSTOM data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select custom from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on CSV of Export screen
+   And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of USERS using THIS MONTH  data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This month from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of USERS using LAST MONTH data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last month from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
+   Scenario: verify Download PDF of USERS using ALL week data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select This week from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select Last week from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+  
+   Scenario: verify Download excel of PDF using THIS MONTH  data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select This month from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select Last month from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select This quarter from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of USERS using THIS QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select This quarter from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of USERS using LAST QUARTER data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last quarter from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
+   Scenario: verify Download PDF of USERS using LAST QUARTER data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select Last quarter from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And  Select This year from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
+   And   Select Last year from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
    
-   #Scenario: verify Download excel of USERS using THIS YEAR data range
-   #Given Click on ManageDashBoard
-   #And  Click on Export of manage screen
-   #And  Select This year from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of USERS using LAST YEAR data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select Last year from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
-   
-   #Scenario: verify Download excel of USERS using CUSTOM data range
-   #Given Click on ManageDashBoard
-   #And   Click on Export of manage screen
-   #And   Select custom from dropdown from export
-   #And Click on USERS radiobutton of import  
-   #And Click on PDF of Export screen
-   #And Click on export button of Export Screen
+   Scenario: verify Download PDF of USERS using CUSTOM data range
+   Given Click on ManageDashBoard
+   And   Click on Export of manage screen
+   And   Select custom from dropdown from export
+   And Click on USERS radiobutton of import  
+   And Click on PDF of Export screen
+   And Click on export button of Export Screen
    
    
    

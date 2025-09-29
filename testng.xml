@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.Capium.Utilites.HelperClass"/>
-      <class name="com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner"/>
+       <class name="com.Capium.RunnerFiles.ImportExportPermissionsRunner"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

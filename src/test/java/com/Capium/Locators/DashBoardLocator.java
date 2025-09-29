@@ -123,5 +123,8 @@ public class DashBoardLocator {
 	@FindBy(xpath="//mat-icon[normalize-space()='history']")
 	public WebElement history;
 	
+	@FindBy(xpath="//img[normalize-space(@alt)='Capium Logo']")
+	public WebElement capiumlogo;
+	
 }
 

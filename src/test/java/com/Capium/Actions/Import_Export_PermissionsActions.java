@@ -1,10 +1,10 @@
 package com.Capium.Actions;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -13,15 +13,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.Capium.Locators.Import_Export_PermissionsLocators;
-
 import com.Capium.Utilites.HelperClass;
 import com.Capium.Utilites.Log;
 
-import ch.qos.logback.core.util.Duration;
-
 public class Import_Export_PermissionsActions {
+	
 	Import_Export_PermissionsLocators importexportpermissions= null;
 	public Import_Export_PermissionsActions() {
 		this.importexportpermissions = new 	Import_Export_PermissionsLocators();
@@ -31,11 +30,12 @@ public class Import_Export_PermissionsActions {
 	
 	public void ManageDashBoard() throws InterruptedException {
 		Thread.sleep(3000);
-		HelperClass.waitUntilVisible(HelperClass.getWait(),importexportpermissions.Manage);
+			HelperClass.waitUntilVisible(HelperClass.getWait(),importexportpermissions.Manage);
 		HelperClass.waitUntilClickable(HelperClass.getWait(),importexportpermissions.Manage);
 		HelperClass.ClickUsingJS(HelperClass.getDriver(),importexportpermissions.Manage);
 	}
 	public void Permissions() throws InterruptedException {
+	
 		HelperClass.waitUntilVisible(HelperClass.getWait(),importexportpermissions.Permissions);
 		HelperClass.waitUntilClickable(HelperClass.getWait(),importexportpermissions.Permissions);
 		HelperClass.ClickUsingJS(HelperClass.getDriver(),importexportpermissions.Permissions);
@@ -200,63 +200,192 @@ Log.info("email log,users log,users,exports,permission,import");
 			importexportpermissions.AllFromdropdown.click();
 		}
 		public void ClickOnThisWeekDropdownFromExport() {
-			HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","This Week");		
+			HelperClass.waitForPageToLoad(driver);
+			HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","This Week");	
+			
 		}
+		
+		
+		
+//			public void ClickOnThisWeekDropdownFromExport() {
+//			    // Step 1: Select "This Week" from the dropdown
+//			    HelperClass.selectFromCustomDropdown(
+//			        HelperClass.getDriver(),
+//			        "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']",
+//			        "This Week"
+//			    );
+//
+//			    // Step 2: Wait for dropdown input to become visible
+//			    WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(10));
+//			    WebElement dropdownInput = wait.until(ExpectedConditions.visibilityOfElementLocated(
+//			        By.xpath("//input[@type='text' and @aria-autocomplete='list']")
+//			    ));
+//
+//			    // Step 3: Get value from the input
+//			    String actualText = dropdownInput.getAttribute("value");
+//			    String expectedText = "This Week";
+//
+//			    // Step 4: Use equals directly (with null check beforehand)
+//			    if (actualText != null && actualText.equals(expectedText)) {
+//			        System.out.println("✅ 'This Week' is correctly selected in the dropdown.");
+//			        Assert.assertTrue(true, "'This Week' is selected as expected.");
+//			    } else {
+//			        System.out.println("❌ Validation failed! Expected: '" + expectedText + "', but found: '" + actualText + "'");
+//			        Assert.fail("Dropdown selection validation failed!");
+//			    }
+//			}
+//
+//			
+			
+		
 	public void ClickOnSaveAndNextOfImport() throws InterruptedException {
 		Thread.sleep(3000);
 		importexportpermissions.SaveAndNextOfImport.click();
 }
 	public void ClickOnNextButtonafterbrowse() throws InterruptedException {
+		HelperClass.waitForPageToLoad(driver);
 		importexportpermissions.NextButtonAfterBrowse.click();
 }
-	public void mousehoverExcel() throws InterruptedException {
-		HelperClass.hoverOverElement(By.xpath("//button[.//p[normalize-space(text())='Excel']]"));
-		HelperClass.ClickUsingJS(HelperClass.getDriver(), By.xpath("//button[.//p[normalize-space(text())='Excel']]"));
-		String actualText = HelperClass.getText(By.xpath("//button[.//p[normalize-space(text())='Excel']]")).trim();
-		String expected = "Click on excel";
+	public void clickExcelInExport() {
+		HelperClass.waitForPageToLoad(driver);
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    HelperClass.waitForPageToLoad(driver);
+	    HelperClass.scrollIntoView(importexportpermissions.ExportofExcelOFRexport);
 
-		if (actualText.equals(expected)) {
-			System.out.println("'excel clicked' page verified");
-		} else {
-			System.out.println("Text not matched. Actual: " + actualText);
-		}
-}
+	    WebElement excelButton = wait.until(ExpectedConditions.elementToBeClickable(
+	        By.xpath("//button[.//p[normalize-space(text())='Excel']]")  
+	    ));
+	    // Validate and click
+	    if (excelButton.isDisplayed() && excelButton.isEnabled()) {
+	        excelButton.click();
+	        System.out.println(" Excel  clicked.");
+	        Assert.assertTrue(true, "Excel  clicked successfully.");
+	    } else {
+	        System.out.println(" Excel  is not clickable.");
+	        Assert.fail("Excel  is not clickable.");
+	    }
+	}
+
+			
+		
+
 	public void exportForexcelInexport() throws InterruptedException {
+	
 		importexportpermissions.ExportofExcelOFRexport.click();
-}
+	}
+//		HelperClass.waitForPageToLoad(driver);
+//		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//
+//		    WebElement exportButton = wait.until(ExpectedConditions.elementToBeClickable(
+//		        By.xpath("//button[normalize-space()='Export']") 
+//		    ));
+//		    HelperClass.waitForPageToLoad(driver);
+//		    if (exportButton.isDisplayed() && exportButton.isEnabled()) {
+//		        exportButton.click();
+//		        System.out.println(" Export button clicked.");
+//		        Assert.assertTrue(true, "Export button clicked successfully.");
+//		    } else {
+//		        System.out.println(" Export button is not clickable.");
+//		        Assert.fail("Export button is not clickable.");
+//		    }
+//		}
+
+
 	public void ClickOnLastWeekDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","Last Week");		
-}
+	}
+		
+//		public void ClickOnLastWeekDropdownFromExport() {
+//		    WebDriver driver = HelperClass.getDriver();
+//		    String expectedOption = "Last Week";
+//		    String dropdownXPath = "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']";
+//
+//		    try {
+//		        // Select "Last Week" from dropdown
+//		        HelperClass.selectFromCustomDropdown(driver, dropdownXPath, expectedOption);
+//		        HelperClass.waitForPageToLoad(driver); // Optional: wait for UI to update
+//
+//		        // Get selected value from input inside the dropdown
+//		        String actualValue = driver.findElement(By.xpath(dropdownXPath + "//input")).getAttribute("value").trim();
+//
+//		        // Assertion using assertTrue
+//		        Assert.assertTrue(
+//		            actualValue.equals(expectedOption),
+//		            "Dropdown selection failed! Expected: '" + expectedOption + "', but found: '" + actualValue + "'"
+//		        );
+//
+//		    } catch (Exception e) {
+//		        Assert.fail("Exception occurred while selecting 'Last Week' from dropdown: " + e.getMessage());
+//		    }
+//		}
+
+
 	public void ClickOnThisMonthDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","This Month");		
 }
 	public void ClickOnLastMonthDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","Last Month");		
 }
 	public void ClickOnThisQuarterDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","This Quarter");		
 }
 	public void ClickOnLastQuarterDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","Last Quarter");		
 }
 	public void ClickOnThisYearDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","This Year");		
 }
 	public void ClickOnLastYearDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","Last Year");		
 }
 	public void ClickOnCustomDropdownFromExport() {
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//input[@type='text' and @aria-autocomplete='list']/parent::div[@role='combobox']","Custom");		
 }
 	public void exportForCSVInexport() throws InterruptedException {
+		HelperClass.waitForPageToLoad(driver);
 		importexportpermissions.ExportasCSVforExport.click();
 	}
 		public void exportForPDFInexport() throws InterruptedException {
+			HelperClass.waitForPageToLoad(driver);
 			importexportpermissions.ExportasPDFforExport.click();
 }
 		public void ClickUsersRadioButtonInImport() throws InterruptedException {
+			HelperClass.waitForPageToLoad(driver);
 			Thread.sleep(4000);
 			importexportpermissions.UsersRadioButtonInImport.click();
 //			HelperClass.validateCheckboxIsSelected(driver, "/html[1]/body[1]/app-root[1]/app-home[1]/div[1]/div[1]/div[1]/app-settings[1]/div[1]/div[1]/app-export-settings[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/mat-checkbox[1]/div[1]/div[1]/input[1]");
 	}
+		
+		public void ClientsRadiobuttoninExport() {
+			HelperClass.waitForPageToLoad(driver);
+		
+			importexportpermissions.ClientsRadioButtonInEXPORT.click();
+			
+		}
 }
+//		public void validateAndClickClientsCheckbox() {
+//		    WebElement clientsCheckbox = new WebDriverWait(driver, Duration.ofSeconds(10))
+//		        .until(ExpectedConditions.presenceOfElementLocated(
+//		            By.xpath("(//mat-checkbox//input[@type='checkbox'])[1]")
+//		        ));
+//
+//		    if (clientsCheckbox.isDisplayed() && clientsCheckbox.isEnabled()) {
+//		        clientsCheckbox.click();
+//		        if (clientsCheckbox.isSelected()) {
+//		            Assert.assertTrue(true, "'Clients' checkbox selected.");
+//		        } else {
+//		            Assert.fail("'Clients' checkbox not selected after click.");
+//		        }
+//		    } else {
+//		        Assert.fail("'Clients' checkbox not clickable.");
+//		    }
+//		}
+//}

@@ -503,6 +503,17 @@ public class CapitalAllowances_Locator {
 	
 	@FindBy(xpath="//span[normalize-space()='Cancel Changes']")
 	public WebElement CancelChangesforcapitallowance;
+	
+	@FindBy(xpath="//button[.//span[text()='Asset Summary']]")
+	public WebElement Assetsummaryforstructureandbuildings;
+	
+	@FindBy(xpath="//a[normalize-space(text())='CT600 Computation']/ancestor::li")
+	public WebElement CT600computationforstructureandbuildings;
+	
+	@FindBy(xpath="//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]")
+	public WebElement EnhancedEXpenditureInMainformforstructureandbuildings;
+	
+	
 }
 	
 
