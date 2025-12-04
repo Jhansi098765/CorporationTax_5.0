@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 import com.Capium.Actions.ManageActions;
+import com.Capium.Utilites.HelperClass;
+import com.Capium.Utilites.Log;
+import com.Capium.Utilites.StepTracker;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,31 +18,49 @@ public class ManagesStepdefinations {
 @Given("Click on ManageDashboard")
 public void click_on_manage_dashboard() throws InterruptedException, TimeoutException {
    manageactions.verifyandselectmanage();
+   Hooks.captureScreenshotBase64(HelperClass.getDriver(), Hooks.getScenarioTest(), "Verify and select manage");
+   StepTracker.setCurrentStep("Verify and select manage");
+   Log.info("Verify and select manage");
 }
 
 	@Then("verify and select client")
 	public void verifyandSelectClient() throws InterruptedException {
 		manageactions.verifyandSelectClient();  
+		Hooks.captureScreenshotBase64(HelperClass.getDriver(), Hooks.getScenarioTest(), "Verify and select Client");
+		   StepTracker.setCurrentStep("Verify and select Client");
+		   Log.info("Verify and select Client");
 	}
 
 	@Then("verify and select users")
 	public void verify_and_select_users() throws InterruptedException, TimeoutException {
 		manageactions.verifyandSelectUsers();
+		Hooks.captureScreenshotBase64(HelperClass.getDriver(), Hooks.getScenarioTest(), "Verify and select Users");
+		   StepTracker.setCurrentStep("Verify and select Users");
+		   Log.info("Verify and select Users");
 	}
 
 	@Then("verify and select import")
 	public void verify_and_select_import() throws InterruptedException {
 		manageactions. verifyandSelectImport();
+		Hooks.captureScreenshotBase64(HelperClass.getDriver(), Hooks.getScenarioTest(), "Verify and select import");
+		   StepTracker.setCurrentStep("Verify and select import");
+		   Log.info("Verify and select import");
 	}
 
 	@Then("verify and select export")
 	public void verify_and_select_export() throws InterruptedException {
 		manageactions.verifyandSelectExport();
+		Hooks.captureScreenshotBase64(HelperClass.getDriver(), Hooks.getScenarioTest(), "Verify and select export");
+		   StepTracker.setCurrentStep("Verify and select export");
+		   Log.info("Verify and select export");
 	}
 
 	@Then("verify and select permission")
 	public void verify_and_select_permission() throws InterruptedException {
 		manageactions.verifyandSelectPermission();
+		Hooks.captureScreenshotBase64(HelperClass.getDriver(), Hooks.getScenarioTest(), "Verify and select permission");
+		   StepTracker.setCurrentStep("Verify and select permission");
+		   Log.info("Verify and select permission");
 	}
 
 

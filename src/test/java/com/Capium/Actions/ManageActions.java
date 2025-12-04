@@ -8,6 +8,8 @@ import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 import java.time.Duration;
+
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -47,7 +49,7 @@ public void verifyandselectmanage() throws TimeoutException {
 	     // Use the outerHTML <a> element and its span text
 	     WebElement Manage = wait.until(ExpectedConditions
 	             .elementToBeClickable(By.xpath("//span[normalize-space()='Manage']")));
-
+Thread.sleep(3000);
 	     Manage.click();
 	     HelperClass.waitForPageToLoad(driver);
 
@@ -58,10 +60,9 @@ public void verifyandselectmanage() throws TimeoutException {
 	}
 	
 
-	private void fastAngularClick(WebDriver driver2, By manage2, String string) {
 	
 	
-}
+
 
 
 	public void verifyandSelectClient() throws InterruptedException {
@@ -71,8 +72,19 @@ public void verifyandselectmanage() throws TimeoutException {
 		HelperClass.waitUntilVisible(HelperClass.getWait(),manage.Clients);
 		HelperClass.waitUntilClickable(HelperClass.getWait(),manage.Clients);
 		HelperClass.ClickUsingJS(HelperClass.getDriver(), manage.Clients);
-		 HelperClass.validatePageText(driver,"Add Client",By.xpath("//span[contains(text(),'Add Client')]"));
-	   
+//		 HelperClass.validatePageText(driver,"Add Client",By.xpath("//span[contains(text(),'Add Client')]"));
+		 try {
+			    WebElement AddClient = driver.findElement(By.xpath("//span[contains(text(),'Add Client')]"));
+			    String actualText = AddClient.getText().trim();
+
+			    if (AddClient.isDisplayed() && actualText.equals("Add Client")) {
+			        Assert.assertTrue(true, "Add Client is visible and text matches.");
+			    } else {
+			        Assert.fail("Add Client validation failed. Either not visible or text mismatch. Found text: '" + actualText + "'");
+			    }
+			} catch (Exception e) {
+			    Assert.fail("Add Client element not found. Exception: " + e.getMessage());
+			}
 		
 	}
 
@@ -120,22 +132,48 @@ public void verifyandselectmanage() throws TimeoutException {
 		 HelperClass.waitForPageToLoad(driver);
 		HelperClass.waitUntilClickable(HelperClass.getWait(),manage.Import);
 		HelperClass.ClickUsingJS(HelperClass.getDriver(), manage.Import);
-		 HelperClass.waitForPageToLoad(driver);
-		 HelperClass.validatePageText(driver,"Import Data",By.xpath("//p[normalize-space()='Import Data']"));
+		 HelperClass.waitForPageToLoad(driver);	
+//		HelperClass.validatePageText(driver,"Import Data",By.xpath("//p[normalize-space()='Import Data']"));
+		 
+		 try {
+			    WebElement ImportData = driver.findElement(By.xpath("//p[normalize-space()='Import Data']"));
+			    String actualText = ImportData.getText().trim();
+
+			    if (ImportData.isDisplayed() && actualText.equals("Import Data")) {
+			        System.out.println("'Import Data' is visible and text matches: " + actualText);
+			        Assert.assertTrue(true, "Import Data is visible and text matches.");
+			    } else {
+			        Assert.fail("Import Data validation failed. Either not visible or text mismatch. Found text: '" + actualText + "'");
+			    }
+			} catch (Exception e) {
+			    Assert.fail("Import Data element not found. Exception: " + e.getMessage());
+			}
+
+	} 
 	
-		
-		
-	}
 	public void verifyandSelectExport() throws InterruptedException {
 		 HelperClass.waitForPageToLoad(driver);
 		HelperClass.waitUntilVisible(HelperClass.getWait(),manage.Export);
 		HelperClass.waitUntilClickable(HelperClass.getWait(),manage.Export);
 		 HelperClass.waitForPageToLoad(driver);
 		HelperClass.ClickUsingJS(HelperClass.getDriver(), manage.Export);
-		 HelperClass.validatePageText(driver,"Export Data",By.xpath("//p[normalize-space()='Export Data']"));
-	
-	    }	
-		
+//		 HelperClass.validatePageText(driver,"Export Data",By.xpath("//p[normalize-space()='Export Data']"));
+		 
+		 try {
+			    WebElement ExportData = driver.findElement(By.xpath("//p[normalize-space()='Export Data']"));
+			    String actualText = ExportData.getText().trim();
+
+			    if (ExportData.isDisplayed() && actualText.equals("Export Data")) {
+			        System.out.println("'Export Data' is visible and text matches: " + actualText);
+			        Assert.assertTrue(true, "Export Data is visible and text matches.");
+			    } else {
+			        Assert.fail("Export Data validation failed. Either not visible or text mismatch. Found text: '" + actualText + "'");
+			    }
+			} catch (Exception e) {
+			    Assert.fail("Export Data element not found. Exception: " + e.getMessage());
+			}
+
+	} 	
 	
 	public void verifyandSelectPermission() throws InterruptedException {
 		 HelperClass.waitForPageToLoad(driver);
@@ -144,15 +182,24 @@ public void verifyandselectmanage() throws TimeoutException {
 		 HelperClass.waitForPageToLoad(driver);
 		HelperClass.ClickUsingJS(HelperClass.getDriver(), manage.Permission);
 		 HelperClass.waitForPageToLoad(driver);
-		 HelperClass.validatePageText(driver,"Admin Access",By.xpath("//th[normalize-space()='Admin Access']"));
-	
+//		 HelperClass.validatePageText(driver,"Admin Access",By.xpath("//th[normalize-space()='Admin Access']"));
+		 
+		 
+		 try {
+			    WebElement adminAccess = driver.findElement(By.xpath("//th[normalize-space()='Admin Access']"));
+			    String actualText = adminAccess.getText().trim();
+
+			    if (adminAccess.isDisplayed() && actualText.equals("Admin Access")) {
+			        System.out.println("'Admin Access' is visible and text matches: " + actualText);
+			        Assert.assertTrue(true, "Admin Access is visible and text matches.");
+			    } else {
+			        Assert.fail("Admin Access validation failed. Either not visible or text mismatch. Found text: '" + actualText + "'");
+			    }
+			} catch (Exception e) {
+			    Assert.fail("Admin Access element not found. Exception: " + e.getMessage());
+			}
 	}
-		
-		
-		
-
 	
-
     public void clickAdduser() throws InterruptedException {
     	HelperClass.waitUntilVisible(HelperClass.getWait(),manage.adduser);
     	HelperClass.waitUntilClickable(HelperClass.getWait(),manage.adduser);
@@ -174,6 +221,8 @@ public void verifyandselectmanage() throws TimeoutException {
 
 			    if (actualText.equals(expectedText)) {
 			        System.out.println("✅ Title selected correctly: " + actualText);
+			        Assert.assertTrue(true, "Title selected correctly");
+      
 			    } else {
 			        throw new AssertionError("❌ Incorrect title selected! Expected: '" + expectedText + "', but found: '" + actualText + "'");
 			    }

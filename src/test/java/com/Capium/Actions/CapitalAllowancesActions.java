@@ -55,13 +55,6 @@ public class CapitalAllowancesActions{
 		 }
 		}
 	
-	
-	
-	
-	
-	
-	
-
 
 	public void SearchTextfield(String clientname) throws InterruptedException {
 		 HelperClass.waitForPageToLoad(driver);
@@ -76,7 +69,7 @@ public class CapitalAllowancesActions{
 		     searchField.sendKeys(clientname);
 
 		     System.out.println("Entered client name: " + clientname);
-
+            driver.findElement(By.xpath("//mat-icon[normalize-space()='search']")).click();
 		     // Wait for search result containing clientName to appear
 		     wait.until(ExpectedConditions.presenceOfElementLocated(
 		             By.xpath("//td[contains(@class,'mat-mdc-cell')]//a[contains(normalize-space(),'" + clientname+ "')]")));
@@ -337,7 +330,7 @@ public class CapitalAllowancesActions{
 	 
 public void mousehoverdelete() throws InterruptedException {
 	HelperClass.waitForPageToLoad(driver);
-	HelperClass.hoverOverElement(By.xpath("//table/tbody/tr[1]"));
+	HelperClass.hoverOverElement(By.xpath("//table/tbody/tr[1]"));Thread.sleep(3000);
 	HelperClass.ClickUsingJS(HelperClass.getDriver(), By.xpath("//mat-icon[normalize-space()='delete_outline']/ancestor::button"));
 	String actualText = HelperClass.getText(By.xpath("//h2[normalize-space(text())='Confirm Delete']")).trim();
 	String expected = "Confirm Delete";
@@ -391,6 +384,7 @@ String[] row1=data[0];
 		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")));
 		  HelperClass.ClickUsingJS(driver, By.xpath("//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']"));
 		  Thread.sleep(5000);
+			HelperClass.waitForPageToLoad(driver);
 		  HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']","Machinery and Plant (Special Rate Pool)");
 		  Thread.sleep(2000);
 	  }
@@ -1740,18 +1734,25 @@ public void SelectAssetCategoryAsShortlifeasset() throws InterruptedException {
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']")));
 	  HelperClass.ClickUsingJS(driver, By.xpath("//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']"));
 	  Thread.sleep(7000);
+		HelperClass.waitForPageToLoad(driver);
+
 	  HelperClass.selectFromCustomDropdown(HelperClass.getDriver(), "//ng-select[@formcontrolname='assetCategory']//input[@aria-autocomplete='list']","Short Life Assets");
 	  Thread.sleep(2000);
+		HelperClass.waitForPageToLoad(driver);
+
 }
 
 public void AssertSummaryforshortlifeassetofwdvamount() {
+	HelperClass.waitForPageToLoad(driver);
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//span[text()='Asset Summary']]")));
 	  HelperClass.ClickUsingJS(HelperClass.getDriver(), capitalallowance.AssertSummaryforshortlifeassetofwdvamount);
-	 
+		HelperClass.waitForPageToLoad(driver);
+
 	         
 	// verify and validations
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='Other Additions']]/td"), "1000.00");
-	
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.scrollIntoView(capitalallowance.TotalAIAClaimed);
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='WDA @ 18.00%']]/td"),"(180.00)");
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='WDV C/fwd']]/td"),"820.00");
@@ -1780,7 +1781,8 @@ public void AssertSummaryforshortlifeassetofadditionamount() {
 	         
 	// verify and validations
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='Other Additions']]/td"), "1000.00");
-	
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.scrollIntoView(capitalallowance.TotalAIAClaimed);
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='WDA @ 18.00%']]/td"),"(180.00)");
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='WDV C/fwd']]/td"),"820.00");
@@ -1789,11 +1791,17 @@ public void AssertSummaryforshortlifeassetofadditionamount() {
 
 }
 public void CT600Computationforshortlifeassetofadditionamount() throws InterruptedException {
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.scrollIntoView(capitalallowance.CT600computationforshortlifeassetofwdvamount);
 	capitalallowance.CT600computationForotherChargesandallowances.click();
+	HelperClass.waitForPageToLoad(driver);
+
 	Thread.sleep(3000);
 	HelperClass.validateAndVerify(By.xpath("//span[@title='ct-comp:TotalCapitalAllowances (FYear)']"), "180.00");
 	System.out.println("computation 180.00");
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.validateAndVerify(By.xpath("//tr[td[text()='Additions qualifying for FYA']]/td[@class='aright'][1]"), "970.00");
 	Thread.sleep(3000);
 HelperClass.scrollIntoView(capitalallowance.TransferfromSLAtoMainPool);
@@ -1831,11 +1839,13 @@ HelperClass.validateAndVerify(By.xpath("(//tr[td[normalize-space()='WDA @ 18.00%
 public void AssertSummaryforrestrictionandadditionamountforspecialratepool() {
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//span[text()='Asset Summary']]")));
 	  HelperClass.ClickUsingJS(HelperClass.getDriver(), capitalallowance.AssertSummaryforshortlifeassetofwdvamount);
-	 
+		HelperClass.waitForPageToLoad(driver);
+
 	         
 	// verify and validations
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='Other Additions']]/td"), "1000.00");
-	
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.scrollIntoView(capitalallowance.TotalAIAClaimed);
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='WDA @ 6.00%']]/td"),"(30.00)");
 
@@ -1924,10 +1934,12 @@ HelperClass.validateAndVerify(By.xpath("//tr[td[text()='Super deduction claimed 
 
 }
 public void SuperDeductionatOnethirtypercent() throws InterruptedException {
-	
 	HelperClass.waitForPageToLoad(driver);
+
 	
 	Thread.sleep(3000);
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.ClickUsingJS(HelperClass.getDriver(), capitalallowance.superdeductionatONETHIRTYpercent);
 	HelperClass.waitForPageToLoad(driver);
 
@@ -1936,10 +1948,13 @@ public void SuperDeductionatOnethirtypercent() throws InterruptedException {
 public void CT600_Return2() {
 	 HelperClass.waitForPageToLoad(driver);
 	   	 capitalallowance.CT600return2.click();
+	 	HelperClass.waitForPageToLoad(driver);
+
    }
 public void Assetacquisitiondateforsuperdeduction() throws InterruptedException {
 	 
-	
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.waitUntilVisible(HelperClass.getWait(),capitalallowance.Assetacquisitiondateforsuperdeduction);
 	HelperClass.waitUntilClickable(HelperClass.getWait(),capitalallowance.Assetacquisitiondateforsuperdeduction);
 	HelperClass.ClickUsingJS(HelperClass.getDriver(),capitalallowance.Assetacquisitiondateforsuperdeduction);
@@ -1968,7 +1983,8 @@ public void CT600_Return3() throws InterruptedException {
 public void AssertSummaryforwdvandrestrictionamount() throws InterruptedException {
 	 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//span[text()='Asset Summary']]")));
 	  HelperClass.ClickUsingJS(HelperClass.getDriver(), capitalallowance.AssertSummaryForwdvanddisposedamount);
-	 
+		HelperClass.waitForPageToLoad(driver);
+
 
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='WDV B/fwd']]/td"), "1000.00");
 	HelperClass.validateAndVerify(By.xpath("//tr[th[normalize-space(text())='Disposal proceeds']]/td"), "(30.00)");
@@ -1976,6 +1992,8 @@ public void AssertSummaryforwdvandrestrictionamount() throws InterruptedExceptio
 	
 }
 public void CT600ComputationforWDVandrestrictionamount() throws InterruptedException {
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.scrollIntoView(capitalallowance.CT600computationwdvbfwdamountandDisposedAmount);
 	capitalallowance.CT600computationwdvbfwdamountandDisposedAmount.click();
 	HelperClass.waitForPageToLoad(driver);
@@ -1995,6 +2013,8 @@ public void CT600ComputationforWDVandrestrictionamount() throws InterruptedExcep
 	
 }
 public void CT600Computationforadditionandnoclaim() throws InterruptedException {
+	HelperClass.waitForPageToLoad(driver);
+
 	HelperClass.scrollIntoView(capitalallowance.CT600computationfornoclaimelectricchargevehiclepoints);
 	capitalallowance.CT600computationForotherChargesandallowances.click();
 	HelperClass.waitForPageToLoad(driver);
@@ -2004,6 +2024,8 @@ public void CT600Computationforadditionandnoclaim() throws InterruptedException 
 	
 }
 public void AssertSummaryforadditionandnoclaim() {
+	HelperClass.waitForPageToLoad(driver);
+
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//span[text()='Asset Summary']]")));
 	  HelperClass.ClickUsingJS(HelperClass.getDriver(), capitalallowance.AssertSummaryforshortlifeassetofwdvamount);
 	 

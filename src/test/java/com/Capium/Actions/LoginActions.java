@@ -2,49 +2,34 @@ package com.Capium.Actions;
 
 
 import java.io.IOException;
-
 import java.time.Duration;
 
-import java.util.List;
- 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.JavascriptExecutor;
-
-import org.openqa.selenium.StaleElementReferenceException;
-
-import org.openqa.selenium.TimeoutException;
-
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.FindBy;
-
 import org.openqa.selenium.support.PageFactory;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import org.openqa.selenium.support.ui.WebDriverWait;
- 
-import com.Capium.Locators.LoginLocators;
 
 import com.Capium.Utilites.HelperClass;
-
 import com.Capium.Utilites.Log;
- 
-public class LoginActions {
 
+
+public class  LoginActions {
+	
 	WebDriver driver=HelperClass.getDriver();
-
 	WebDriverWait wait=HelperClass.getWait();
 
-	public LoginActions() {
+
+public LoginActions() {
 
 		PageFactory.initElements(driver, this);
 
-	}
 
+}
+	
 	@FindBy(xpath = "//input[@id='txtusername']")
 
 	public WebElement inputUsername;
@@ -158,7 +143,7 @@ public class LoginActions {
 
 	@FindBy(xpath="//div[normalize-space()='Charity Accounts']/parent::div")
 
-	public WebElement Charity;
+     public WebElement Charity;
 
 
 	public void EnterUsername(String username) throws InterruptedException {
@@ -181,7 +166,7 @@ public class LoginActions {
 
 		btnLoginpage.click();
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
 	}
 
@@ -199,137 +184,6 @@ public class LoginActions {
 
 	}	
  
-public void navigateToCorporationTaxModule() throws IOException {
-
-		WebDriver driver = HelperClass.getDriver();
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-		wait.pollingEvery(Duration.ofMillis(300));
-
-		try {
-
-			boolean navigated = false;
-
-			// Case 1: Direct access
-
-			if (isElementVisible(CorporationTax_Home, wait)) {
-
-//				HelperClass.safeClick(CorporationTax_Home, "Corporation Tax from homepage");
-				
-				HelperClass.ClickUsingJS(driver, By.xpath("//p[text()='Easily submit files to HMRC for corporations']//parent::a"));
-
-				Log.info("Navigated directly to Corporation Tax module.");
-
-				navigated = true;
-
-			}
-
-			// Case 2: Old Eco modules
-
-			else if (!driver
-
-					.findElements(By.xpath("//a/div[contains(@class,'circle') and "
-
-							+ "(normalize-space()='Accounts Production' " + "or normalize-space()='Self Assessment' "
-
-							+ "or normalize-space()='Corporation Tax' " + "or normalize-space()='Bookkeeping')]"))
-
-					.isEmpty()) {
-
-				List<WebElement> oldEcoModules = driver.findElements(By.xpath("//a/div[contains(@class,'circle') and "
-
-						+ "(normalize-space()='Accounts Production' " + "or normalize-space()='Self Assessment' "
-
-						+ "or normalize-space()='Corporation Tax' " + "or normalize-space()='Bookkeeping')]"));
-
-				Log.info("Old Eco space detected. Found " + oldEcoModules.size() + " modules.");
-
-				for (WebElement module : oldEcoModules) {
-
-					String classAttr = module.getAttribute("class");
-
-					if (classAttr != null && (classAttr.contains("disabled") || classAttr.contains("lock"))) {
-
-						Log.info("Skipping locked module: " + module.getText());
-
-						continue;
-
-					}
-
-					if (module.isDisplayed() && module.isEnabled()) {
-
-						Log.info("Clicking Old Eco module: " + module.getText());
-
-						module.click();
-
-						navigated = true;
-
-						try {
-
-							HelperClass.safeClick(C_icon_inside_modules, "C-icon inside Eco");
-
-							HelperClass.safeClick(Charity, "Capium 365 inside C-icon");
-
-							wait.until(ExpectedConditions.visibilityOf(CapiumLogo));
-
-							HelperClass.safeClick(CapiumLogo, "Capium Logo");
-
-							HelperClass.safeClick(CorporationTaxInsideC, "Corporation Tax inside C-icon");
-
-							Log.info("Navigated to Corporation Tax via Old Eco → C-icon flow.");
-
-						} catch (StaleElementReferenceException | TimeoutException e) {
-
-							Log.warn("Retry needed for C-icon navigation inside Old Eco: " + e.getMessage());
-
-						}
-
-						break;
-
-					}
-
-				}
-
-			}
-
-			// Case 3: C-icon flow (if nothing else worked)
-
-			else if (isElementVisible(C_icon_inside_modules, wait)) {
-
-				HelperClass.safeClick(C_icon_inside_modules, "C-icon");
-
-				HelperClass.safeClick(Charity, "Capium 365 inside C-icon");
-
-				wait.until(ExpectedConditions.visibilityOf(CapiumLogo));
-
-				HelperClass.safeClick(CapiumLogo, "Capium Logo");
-
-				HelperClass.safeClick(CorporationTaxInsideC, "Corporation Tax inside C-icon");
-
-				Log.info("Navigated to Corporation Tax module via C-icon flow.");
-
-				navigated = true;
-
-			}
-
-			// Fallback if nothing matched
-
-			if (!navigated) {
-
-				Log.warn("Corporation Tax module not found in any known landing scenario.");
-
-			}
-
-		} catch (Exception e) {
-
-			Log.error("Error while navigating to Corporation Tax module: " + e.getMessage());
-
-			HelperClass.captureScreenshot("CorporationTaxNavigationError");
-
-		}
-
-		}
 
 	public void Logout() throws IOException {
 
@@ -466,5 +320,391 @@ public void navigateToCorporationTaxModule() throws IOException {
 
 	}
 
+	
+		
+	
+
+//public void NavigateToModule(String Module) throws InterruptedException {
+//		
+//		// Wait for URL to stabilize
+//				wait.until(d -> d.getCurrentUrl() != null && !d.getCurrentUrl().isEmpty());
+//				String currentUrl = driver.getCurrentUrl();
+//				System.out.println("Current URL: <<" + currentUrl + ">>");
+//				// Case 1: Already in New Eco Home
+//				Thread.sleep(10000);
+//				if (currentUrl.contains("https://account.capium.com/home")) {
+//					Thread.sleep(10000);
+//					String moduleXpath = "(//h6[normalize-space()='" + Module + "']/ancestor::div[@class='card'])[2]";
+//					WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+//					HelperClass.scrollIntoView(targetModule);
+//					HelperClass.safeClick(targetModule, Module + " Module");
+//					return;
+//				}
+//				// Case 2: Old Eco Homepage (Circle Page)
+//				if (currentUrl.equals("https://app.capium.com/") || currentUrl.equals("https://app.capium.com/")) {
+//					boolean navigated = false;
+//					int retries = 3;
+//					while (!navigated && retries > 0) {
+//						try {
+//							WebElement OldEcoCT = wait.until(ExpectedConditions
+//									.visibilityOf(driver.findElement(By.xpath("//div[contains(text(),'Corporation Tax')]"))));
+//							HelperClass.safeClick(OldEcoCT, "CT Module in Old Eco");
+// 
+//							WebElement C_icon = wait.until(
+//									ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//							HelperClass.safeClick(C_icon, "Modules Icon");
+//							WebElement C_home = wait.until(ExpectedConditions
+//									.visibilityOf(driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//							HelperClass.safeClick(C_home, "Home inside Modules");
+//							String newUrl = driver.getCurrentUrl();
+//							if (newUrl.contains("https://account.capium.com/home")) {
+//								navigated = true;
+//							} else {
+//								retries--;
+//								System.out.println("Navigation did not reach New Eco, retries left: " + retries);
+//							}
+//						} catch (Exception e) {
+//							retries--;
+//							System.out.println(
+//									"Exception during Old Eco navigation, retries left: " + retries + " -> " + e.getMessage());
+//						}
+//					}
+//					if (!navigated) {
+//						throw new RuntimeException("Failed to navigate to New Eco after retries");
+//					}
+// 
+//					// Click target module after navigation
+//					String moduleXpath = "(//h6[normalize-space()='" + Module + "']/ancestor::div[@class='card'])[2]";
+//					WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+//					HelperClass.scrollIntoView(targetModule);
+//					HelperClass.safeClick(targetModule, Module + " Module");
+//					return;
+//				}
+//				// Case 3: Already inside another module (Accounts/Payroll/etc.)
+//				if (currentUrl.startsWith("https://app.capium.com/")
+//						&& !currentUrl.equals("https://app.capium.com/")) {
+// 
+//					boolean navigated = false;
+//					int retries = 3;
+// 
+//					while (!navigated && retries > 0) {
+//						try {
+//							// Step 1: Click Modules icon
+//							WebElement C_icon = wait.until(
+//									ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//							HelperClass.safeClick(C_icon, "Modules Icon");
+// 
+//							// Step 2: Click Home inside Modules
+//							WebElement C_home = wait.until(ExpectedConditions
+//									.visibilityOf(driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//							HelperClass.safeClick(C_home, "Home inside Modules");
+// 
+//							// Step 3: Check if landed in New Eco or Old Eco
+//							String newUrl = driver.getCurrentUrl();
+// 
+//							if (newUrl.contains("https://account.capium.com/home")) {
+//								navigated = true; //Success → already in New Eco home
+//								break;
+//							} else if (newUrl.equals("https://app.capium.com/")
+//									|| newUrl.equals("https://app.capium.com/")) {
+//								//Got redirected to Old Eco home → Use OldEco CT path to jump to NewEco
+//								try {
+//									WebElement OldEcoCT = wait.until(ExpectedConditions.visibilityOf(
+//											driver.findElement(By.xpath("//div[contains(text(),'Corporation Tax')]"))));
+//									HelperClass.safeClick(OldEcoCT, "CT Module in Old Eco");
+//									// Retry going back via Modules → Home
+//									WebElement inner_C_icon = wait.until(ExpectedConditions
+//											.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//									HelperClass.safeClick(inner_C_icon, "Modules Icon Inside OldEco CT");
+//									WebElement inner_C_home = wait.until(ExpectedConditions.visibilityOf(
+//											driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//									HelperClass.safeClick(inner_C_home, "Home inside Modules after OldEco");
+//									String finalUrl = driver.getCurrentUrl();
+//									if (finalUrl.contains("https://account.capium.com/home")) {
+//										navigated = true;
+//										break;
+//									}
+//								} catch (Exception oe) {
+//									System.out.println("Retry OldEco→NewEco failed: " + oe.getMessage());
+//								}
+//							}
+//							retries--;
+//							System.out.println("Retrying Case 3 navigation, attempts left: " + retries);
+// 
+//						} catch (Exception e) {
+//							retries--;
+//							System.out.println(
+//									"Exception in Case 3 navigation, retries left: " + retries + " -> " + e.getMessage());
+//						}
+//					}
+//					if (!navigated) {
+//						throw new RuntimeException("Failed to navigate to New Eco home after retries (Case 3).");
+//					}
+//					String moduleXpath = "(//h6[normalize-space()='" + Module + "']/ancestor::div[@class='card'])[2]";
+//					WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+//					HelperClass.scrollIntoView(targetModule);
+//					HelperClass.safeClick(targetModule, Module + " Module");
+//					return;
+//				}
+// 
+//				throw new RuntimeException("Unknown page state → Cannot navigate to module: " + Module);
+//	}
+// 
+// 
+	
+//	public void NavigateToModule() {
+//		// Wait for URL to stabilize
+//				wait.until(d -> d.getCurrentUrl() != null && !d.getCurrentUrl().isEmpty());
+//				String currentUrl = driver.getCurrentUrl();
+//				System.out.println("Current URL: <<" + currentUrl + ">>");
+//				// Case 1: Already in New Eco Home
+//				if (currentUrl.contains("https://account.capium.com/home")) {
+//					String moduleXpath = "(//h6[normalize-space()='Corporation Tax']/ancestor::div[@class='card'])[2]";
+//					WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+//				cr	HelperClass.sollIntoView(targetModule);
+////					HelperClass.safeClick(targetModule, "CT.50" + " Module");
+//					HelperClass.clickWithRetry(targetModule, driver, wait);
+//					return;
+//				}
+//				// Case 2: Old Eco Homepage (Circle Page)
+//				if (currentUrl.equals("https://app.capium.com/") || currentUrl.equals("https://app.capium.com")) {
+//					boolean navigated = false;
+//					int retries = 3;
+//					while (!navigated && retries > 0) {
+//						try {
+//							WebElement OldEcoCT = wait.until(ExpectedConditions
+//									.visibilityOf(driver.findElement(By.xpath("//div[contains(text(),'Corporation Tax')]"))));
+//							HelperClass.safeClick(OldEcoCT, "CT Module in Old Eco");
+//							WebElement C_icon = wait.until(
+//									ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//							HelperClass.safeClick(C_icon, "Modules Icon");
+//							WebElement C_home = wait.until(ExpectedConditions
+//									.visibilityOf(driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//							HelperClass.safeClick(C_home, "Home inside Modules");
+//							String newUrl = driver.getCurrentUrl();
+//							if (newUrl.contains("https://account.capium.com/home")) {
+//								navigated = true;
+//							} else {
+//								retries--;
+//								System.out.println("Navigation did not reach New Eco, retries left: " + retries);
+//							}
+//						} catch (Exception e) {
+//							retries--;
+//							System.out.println(
+//									"Exception during Old Eco navigation, retries left: " + retries + " -> " + e.getMessage());
+//						}
+//					}
+//					if (!navigated) {
+//						throw new RuntimeException("Failed to navigate to New Eco after retries");
+//					}
+//					// Click target module after navigation
+//					String moduleXpath = "(//h6[normalize-space()='Corporation Tax']/ancestor::div[@class='card'])[2]";
+//					WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+//					HelperClass.scrollIntoView(targetModule);
+//					HelperClass.safeClick(targetModule, "CT.5.0" + " Module");
+//					return;
+//				}
+//				// Case 3: Already inside another module (Accounts/Payroll/etc.)
+//				if (currentUrl.startsWith("https://app.capium.com/")
+//&& !currentUrl.equals("https://app.capium.com/")) {
+//					boolean navigated = false;
+//					int retries = 3;
+//					while (!navigated && retries > 0) {
+//						try {
+//							// Step 1: Click Modules icon
+//							WebElement C_icon = wait.until(
+//									ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//							HelperClass.safeClick(C_icon, "Modules Icon");
+//							// Step 2: Click Home inside Modules
+//							WebElement C_home = wait.until(ExpectedConditions
+//									.visibilityOf(driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//							HelperClass.safeClick(C_home, "Home inside Modules");
+//							// Step 3: Check if landed in New Eco or Old Eco
+//							String newUrl = driver.getCurrentUrl();
+//							if (newUrl.contains("https://account.capium.com/home")) {
+//								navigated = true; //Success → already in New Eco home
+//								break;
+//							} else if (newUrl.equals("https://app.capium.com/")
+//									|| newUrl.equals("https://app.capium.com")) {
+//								//Got redirected to Old Eco home → Use OldEco CT path to jump to NewEco
+//								try {
+//									WebElement OldEcoCT = wait.until(ExpectedConditions.visibilityOf(
+//											driver.findElement(By.xpath("//div[contains(text(),'Corporation Tax')]"))));
+//									HelperClass.safeClick(OldEcoCT, "CT Module in Old Eco");
+//									// Retry going back via Modules → Home
+//									WebElement inner_C_icon = wait.until(ExpectedConditions
+//											.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//									HelperClass.safeClick(inner_C_icon, "Modules Icon Inside OldEco CT");
+//									WebElement inner_C_home = wait.until(ExpectedConditions.visibilityOf(
+//											driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//									HelperClass.safeClick(inner_C_home, "Home inside Modules after OldEco");
+//									String finalUrl = driver.getCurrentUrl();
+//									if (finalUrl.contains("https://account.capium.com/home")) {
+//										navigated = true;
+//										break;
+//									}
+//								} catch (Exception oe) {
+//									System.out.println("Retry OldEco→NewEco failed: " + oe.getMessage());
+//								}
+//							}
+//							retries--;
+//							System.out.println("Retrying Case 3 navigation, attempts left: " + retries);
+//						} catch (Exception e) {
+//							retries--;
+//							System.out.println(
+//									"Exception in Case 3 navigation, retries left: " + retries + " -> " + e.getMessage());
+//						}
+//					}
+//					if (!navigated) {
+//						throw new RuntimeException("Failed to navigate to New Eco home after retries (Case 3).");
+//					}
+//					String moduleXpath = "(//h6[normalize-space()='Corporation Tax']/ancestor::div[@class='card'])[2]";
+//					WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+//					HelperClass.scrollIntoView(targetModule);
+//					HelperClass.safeClick(targetModule, "CT 5.0" + " Module");
+//					return;
+//				}
+//				throw new RuntimeException("Unknown page state → Cannot navigate to module: " + "CT5.0");
+//	}
+
+	public void NavigateToModule(String Module) {
+		// Wait for URL to stabilize
+		wait.until(d -> d.getCurrentUrl() != null && !d.getCurrentUrl().isEmpty());
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println("Current URL: <<" + currentUrl + ">>");
+		// Case 1: Already in New Eco Home
+if (currentUrl.contains("account.capium.com/home")) {
+		//if (currentUrl.contains("account.beta.capium.co.uk/")) {
+			// String moduleXpath = "//h6[normalize-space()='" + Module +
+			// "']/ancestor::div[@class='card']";
+//			String moduleXpath = "(//h6[normalize-space()='" + Module + "']/ancestor::div[@class='card'])[last()]";
+//			String moduleXpath = "(//h6[contains(normalize-space(), '" + Module + "')]/ancestor::a)[last()]";
+			String moduleXpath = "(//h6[normalize-space()='"+Module+"']/ancestor::div[@class='card'])[last()]";
+
+			WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+			HelperClass.scrollIntoView(targetModule);
+			HelperClass.clickWithRetry(targetModule, driver, wait);
+//			HelperClass.safeClick(targetModule, Module + " Module");
+			return;
+		}
+		// Case 2: Old Eco Homepage (Circle Page)
+		if (currentUrl.equals("https://app.capium.com/") || currentUrl.equals("https://app.capium.com")) {
+		//if (currentUrl.equals("https://app.beta.capium.co.uk/") || currentUrl.equals("https://app.beta.capium.co.uk")) {
+			boolean navigated = false;
+			int retries = 3;
+			while (!navigated && retries > 0) {
+				try {
+					WebElement OldEcoCT = wait.until(ExpectedConditions
+							.visibilityOf(driver.findElement(By.xpath("//div[contains(text(),'Accounts Production')]"))));
+					HelperClass.clickWithRetry(OldEcoCT, driver, wait);
+
+//					HelperClass.safeClick(OldEcoCT, "CT Module in Old Eco");
+					WebElement C_icon = wait.until(
+							ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//					HelperClass.safeClick(C_icon, "Modules Icon");
+					HelperClass.clickWithRetry(C_icon, driver, wait);
+					WebElement C_home = wait.until(ExpectedConditions
+							.visibilityOf(driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//					HelperClass.safeClick(C_home, "Home inside Modules");
+					HelperClass.clickWithRetry(C_home, driver, wait);
+					String newUrl = driver.getCurrentUrl();
+				if (newUrl.contains("account.capium.com/home")) {
+					//if (newUrl.contains("account.beta.capium.co.uk/")) {
+						navigated = true;
+					} else {
+						retries--;
+						System.out.println("Navigation did not reach New Eco, retries left: " + retries);
+					}
+				} catch (Exception e) {
+					retries--;
+					System.out.println(
+							"Exception during Old Eco navigation, retries left: " + retries + " -> " + e.getMessage());
+				}
+			}
+			if (!navigated) {
+				throw new RuntimeException("Failed to navigate to New Eco after retries");
+			}
+			// Click target module after navigation
+			// String moduleXpath = "//h6[normalize-space()='" + Module +"']/ancestor::div[@class='card']";
+//			String moduleXpath = "(//h6[normalize-space()='" + Module + "']/ancestor::div[@class='card'])[last()]";
+//			String moduleXpath = "(//h6[contains(normalize-space(), '" + Module + "')]/ancestor::a)[last()]";
+
+			String moduleXpath = "(//h6[normalize-space()='"+Module+"']/ancestor::div[@class='card'])[last()]";
+			WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+			HelperClass.scrollIntoView(targetModule);
+//			HelperClass.safeClick(targetModule, Module + " Module");
+			HelperClass.clickWithRetry(targetModule, driver, wait);
+			return;
+		}
+		// Case 3: Already inside another module (Accounts/Payroll/etc.)
+		if (currentUrl.startsWith("https://app.capium.com/") && !currentUrl.equals("https://app.capium.com/")) {
+	//	if (currentUrl.startsWith("https://app.beta.capium.co.uk/")&& !currentUrl.equals("https://app.beta.capium.co.uk/")) {
+			boolean navigated = false;
+			int retries = 3;
+			while (!navigated && retries > 0) {
+				try {
+					WebElement C_icon = wait.until(
+							ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//					HelperClass.safeClick(C_icon, "Modules Icon");
+					HelperClass.clickWithRetry(C_icon, driver, wait);
+					WebElement C_home = wait.until(ExpectedConditions
+							.visibilityOf(driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//					HelperClass.safeClick(C_home, "Home inside Modules");
+					HelperClass.clickWithRetry(C_home, driver, wait);
+					String newUrl = driver.getCurrentUrl();
+				if (newUrl.contains("account.capium.com/home")) {
+				//	if (newUrl.contains("account.beta.capium.co.uk/")) {
+						navigated = true;
+						break;
+					}
+				else if (newUrl.equals("https://app.capium.com/") || newUrl.equals("https://app.capium.com")) {
+					//else if (newUrl.equals("https://app.beta.capium.co.uk/")|| newUrl.equals("https://app.beta.capium.co.uk")) {
+						try {
+							WebElement OldEcoCT = wait.until(ExpectedConditions.visibilityOf(
+									driver.findElement(By.xpath("//div[contains(text(),'Accounts Production')]"))));
+//							HelperClass.safeClick(OldEcoCT, "CT Module in Old Eco");
+							HelperClass.clickWithRetry(C_home, driver, wait);
+							WebElement inner_C_icon = wait.until(ExpectedConditions
+									.visibilityOf(driver.findElement(By.xpath("//a[@title='Modules']"))));
+//							HelperClass.safeClick(inner_C_icon, "Modules Icon Inside OldEco CT");
+							HelperClass.clickWithRetry(C_home, driver, wait);
+							WebElement inner_C_home = wait.until(ExpectedConditions.visibilityOf(
+									driver.findElement(By.xpath("//a[@href='/' and contains(@class,'my')]"))));
+//							HelperClass.safeClick(inner_C_home, "Home inside Modules after OldEco");
+							HelperClass.clickWithRetry(C_home, driver, wait);
+							String finalUrl = driver.getCurrentUrl();
+//							if (finalUrl.contains("account.capium.com/home")) {
+							if (finalUrl.contains("account.beta.capium.co.uk/")) {
+								navigated = true;
+								break;
+							}
+						} catch (Exception oe) {
+							System.out.println("Retry OldEco→NewEco failed: " + oe.getMessage());
+						}
+					}
+					retries--;
+					System.out.println("Retrying Case 3 navigation, attempts left: " + retries);
+				} catch (Exception e) {
+					retries--;
+					System.out.println(
+							"Exception in Case 3 navigation, retries left: " + retries + " -> " + e.getMessage());
+				}
+			}
+			if (!navigated) {
+				throw new RuntimeException("Failed to navigate to New Eco home after retries (Case 3).");
+			}
+			// String moduleXpath = "//h6[normalize-space()='" + Module +
+			// "']/ancestor::div[@class='card']";
+//			String moduleXpath = "(//h6[normalize-space()='" + Module + "']/ancestor::div[@class='card'])[last()]";
+//			String moduleXpath = "(//h6[contains(normalize-space(), '" + Module + "')]/ancestor::a)[last()]";
+
+			String moduleXpath = "(//h6[normalize-space()='"+Module+"']/ancestor::div[@class='card'])[last()]";
+			WebElement targetModule = HelperClass.waitForVisibility(driver.findElement(By.xpath(moduleXpath)));
+			HelperClass.scrollIntoView(targetModule);
+//			HelperClass.safeClick(targetModule, Module + " Module");
+			HelperClass.clickWithRetry(targetModule, driver, wait);
+			return;
+		}
+		throw new RuntimeException("Unknown page state → Cannot navigate to module: " + Module);
+	}
 }
-   

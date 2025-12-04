@@ -37,6 +37,7 @@ public class TradingandDormantAtions {
 		     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
 		     // Use the outerHTML <a> element and its span text
+				HelperClass.waitForPageToLoad(driver);
 		     WebElement taxReturnButton = wait.until(ExpectedConditions
 		             .elementToBeClickable(By.xpath("//a[@href='/submissions']//span[normalize-space()='Tax Return']")));
 
@@ -44,9 +45,13 @@ public class TradingandDormantAtions {
 		     HelperClass.waitForPageToLoad(driver);
 
 		     System.out.println("Tax Return clicked successfully.");
+				HelperClass.waitForPageToLoad(driver);
+
 		 } catch (TimeoutException e) {
 		     throw new RuntimeException("Tax Return button not clickable within timeout", e);
 		 } catch (Exception e) {
+				HelperClass.waitForPageToLoad(driver);
+
 		     throw new RuntimeException("Unexpected error while clicking Tax Return: " + e.getMessage(), e);
 		 }
 		}
@@ -57,12 +62,15 @@ public class TradingandDormantAtions {
 		 HelperClass.waitForPageToLoad(driver);
 		 try {
 		     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+				HelperClass.waitForPageToLoad(driver);
 
 		     WebElement searchField = wait.until(ExpectedConditions
 		             .visibilityOfElementLocated(By.xpath("//input[@placeholder='Search here...']")));
 
 		     // Always clear before typing
 		     searchField.clear();
+				HelperClass.waitForPageToLoad(driver);
+
 		     searchField.sendKeys(clientname);
 
 		     System.out.println("Entered client name: " + clientname);
@@ -76,6 +84,8 @@ public class TradingandDormantAtions {
 		 } catch (Exception e) {
 		     throw new RuntimeException("Unexpected error while entering client name: " + e.getMessage(), e);
 		 }
+			HelperClass.waitForPageToLoad(driver);
+
 		 Thread.sleep(5000)	;
 		 }
 	
@@ -84,7 +94,8 @@ public class TradingandDormantAtions {
 			
 				 try {
 				     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		 
+						HelperClass.waitForPageToLoad(driver);
+
 				  
 				     WebElement clientLink = wait.until(ExpectedConditions
 				             .elementToBeClickable(By.xpath("//td[contains(@class,'mat-mdc-cell')]//a[normalize-space()='" + clientName + "']")));
@@ -131,6 +142,8 @@ public void Capital_AllowancesCalculatoroftradingandDormantperiod() throws Inter
     public void AddNewAssetoftradingandDormantperiod() throws InterruptedException{
     	 HelperClass.waitForPageToLoad(driver);
     	HelperClass.ClickUsingJS(HelperClass.getDriver(),TradingandDormant.AddNewAssetoftradingandDormantperiod);
+		HelperClass.waitForPageToLoad(driver);
+
     }
     public void assetdescriptionoftradinganddormantperiod() throws InterruptedException   {
     	 HelperClass.waitForPageToLoad(driver);	
@@ -141,20 +154,22 @@ public void Capital_AllowancesCalculatoroftradingandDormantperiod() throws Inter
 		  String value = assetDescription.getAttribute("value");
 
 		  if (value.equals("Asset1")) {
+				HelperClass.waitForPageToLoad(driver);
 		      System.out.println("PASS: 'Asset1' is in Asset Description field");
 		  } else {
 		      System.out.println("FAIL: 'Asset1' is NOT in Asset Description field");
 		  }
 	  }
 	  
-    public void DormantEndDate() throws InterruptedException {
-
-
-   	 
-		
+    public void DormantEndDate() throws InterruptedException { 
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.waitUntilVisible(HelperClass.getWait(),TradingandDormant.DormantEndDate);
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.waitUntilClickable(HelperClass.getWait(),TradingandDormant.DormantEndDate);
+		HelperClass.waitForPageToLoad(driver);
 		HelperClass.ClickUsingJS(HelperClass.getDriver(),TradingandDormant.DormantEndDate);
+		HelperClass.waitForPageToLoad(driver);
+
 //		//Thread.sleep(3000);
 //			
 //		HelperClass.ClickUsingJS(HelperClass.getDriver(), By.xpath("//button[@aria-label='Choose month and year' and .//span[normalize-space(text())='2023']]"));
@@ -289,24 +304,27 @@ public void Capital_AllowancesCalculatoroftradingandDormantperiod() throws Inter
 			
 			List<String> expectedEnabled = Arrays.asList(
 				   
-				    "First Year Allowance at 100%"
-				   
+				    "First Year Allowance at 100%",
+				    "Asset is a Car",
+				    "Super deduction at 130%"
 				);
-				 
+			HelperClass.waitForPageToLoad(driver);
+
 				List<String> ignoreList = Arrays.asList(
 				    "No Claim",
 				    "Business Closed"
 				);
-				 
+				HelperClass.waitForPageToLoad(driver);
+
 				HelperClass.validateCheckboxes(driver, expectedEnabled, ignoreList);
 	 }
-
  
-
  public void AssertSummaryfortradinganddormantperiod() {
 	 HelperClass.waitForPageToLoad(driver);	
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//span[text()='Asset Summary']]")));
 	  HelperClass.ClickUsingJS(HelperClass.getDriver(), TradingandDormant.AssertSummaryoftradingandDormantperiod);
+		HelperClass.waitForPageToLoad(driver);
+
 	 
 	         
 	// verify and validations
@@ -314,26 +332,37 @@ public void Capital_AllowancesCalculatoroftradingandDormantperiod() throws Inter
 	 HelperClass.waitForPageToLoad(driver);	
 	HelperClass.scrollIntoView(TradingandDormant.TotalAIAClaimedoftradingandDormantperiod);
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='WDA @ 18.00%']]/td"),"(180.00)");
+	HelperClass.waitForPageToLoad(driver);
 	HelperClass.validateAndVerify(By.xpath("//tr[th[normalize-space()='WDV C/fwd']]/td"),"820.00");
+	HelperClass.waitForPageToLoad(driver);
 	HelperClass.validateAndVerify(By.xpath("//tr[th[text()='Total FYA & WDA claimed']]/td"),"180.00");
+	HelperClass.waitForPageToLoad(driver);
+
 }
   
 	public void CT600computationoftradingandDormantperiod() throws InterruptedException {
-		 HelperClass.waitForPageToLoad(driver);	
+		HelperClass.waitForPageToLoad(driver);	
 		HelperClass.scrollIntoView(TradingandDormant.CT600computationoftradingandDormantperiod);
 		TradingandDormant.CT600computationoftradingandDormantperiod.click();
+		HelperClass.waitForPageToLoad(driver);
 		Thread.sleep(3000);
 		HelperClass.validateAndVerify(By.xpath("//span[@title='ct-comp:TotalCapitalAllowances (FYear)']"), "180.00");
 		System.out.println("computation 180");
+		HelperClass.waitForPageToLoad(driver);
 		Thread.sleep(3000);
         HelperClass.scrollIntoView(TradingandDormant.TransferfromSLAtoMainPooloftradingandDormantperiod);
 	    HelperClass.validateAndVerify(By.xpath("(//tr[td[normalize-space()='WDV B/fwd']]/td[@class='aright'])[1]"), "1,000.00");
+		HelperClass.waitForPageToLoad(driver);
 	    System.out.println("comuputation 1000");
 		
 	}
    public void MainformForCapitalallowanceoftradingandDormantperiod() {
+		HelperClass.waitForPageToLoad(driver);
 	   TradingandDormant.MainformForCapitalallowanceoftradingandDormantperiod.click();
+		HelperClass.waitForPageToLoad(driver);
 	   HelperClass.scrollIntoView(TradingandDormant.CapitalallowancesAndBalancingChargeInMainFormoftradingandDormantperiod);
+		HelperClass.waitForPageToLoad(driver);
+
    }
 	 public void EnhancedEXpenditureInMainformoftradingandDormantperiod() throws InterruptedException {
 		 HelperClass.ClickUsingJS(HelperClass.getDriver(), By.xpath("//li[a[p[normalize-space()='Page 8'] and contains(normalize-space(), 'Enhanced Expenditure')]]"));
@@ -344,6 +373,7 @@ public void Capital_AllowancesCalculatoroftradingandDormantperiod() throws Inter
 		 WebElement element = driver.findElement(By.xpath("//input[@formcontrolname='box705']"));
 		 String value = element.getAttribute("value");
 		 System.out.println("Fetched Main form Value: " + value);
+		 HelperClass.waitForPageToLoad(driver);
 
 
 		
@@ -1212,7 +1242,7 @@ public void Assetacquisitiondateforshortlifeasset() throws InterruptedException 
 	}
 	
 	List<String> expectedEnabled = Arrays.asList(
-		    "Asset is a Car",
+//		    "Asset is a Car",
 		    "Super deduction at 130%",
 		    "Claim Small Pool Allowances"
 		);
@@ -1493,6 +1523,102 @@ public void capitalallowancesandBalancingchargesforotherchargesandallowancesform
 //	     Assert.fail("Mismatch in Allowance Amount! Expected: " + expectedAllowanceAmount + ", but got: " + actualAllowanceAmount);
 	 }
 }
+public void AssetacquisitiondateoftradingandDormantperiodforelectricvehiclechargepoints() throws InterruptedException {
+	 
+	 HelperClass.waitForPageToLoad(driver);	
+		HelperClass.waitUntilVisible(HelperClass.getWait(),TradingandDormant.AssetacquisitiondateoftradingandDormantperiod);
+		HelperClass.waitUntilClickable(HelperClass.getWait(),TradingandDormant.AssetacquisitiondateoftradingandDormantperiod);
+		HelperClass.ClickUsingJS(HelperClass.getDriver(),TradingandDormant.AssetacquisitiondateoftradingandDormantperiod);
+		 HelperClass.waitForPageToLoad(driver);	
+		HelperClass.ClickUsingJS(HelperClass.getDriver(), By.xpath("//button[@aria-label='1 March 2023']"));
+		
+		 HelperClass.waitForPageToLoad(driver);	
+		 
+
+			WebElement wdaRate = driver.findElement(By.xpath("//input[@formcontrolname='WDARate']"));
+			 
+			// Use JavaScript to read the DOM property `.value`
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String actualWDVRate = (String) js.executeScript("return arguments[0].value;", wdaRate);
+	 
+			System.out.println("WDARate Value-->: " + actualWDVRate);
+			
+			
+			String expectedWDVRate = "0";
+	 
+			if (actualWDVRate.equals(expectedWDVRate)) {
+			    System.out.println(" WDVRate Matched: -->>" + actualWDVRate);
+			    
+			    
+			} else {
+			    System.out.println("Validation Failed: Expected ->" + expectedWDVRate + " but found ->" + actualWDVRate);
+			  
+			    
+			}
+			
+			List<String> expectedEnabled = Arrays.asList(
+				   
+				    "First Year Allowance at 100%"
+				   
+				);
+				 
+				List<String> ignoreList = Arrays.asList(
+				    "No Claim",
+				    "Business Closed"
+				);
+				 
+				HelperClass.validateCheckboxes(driver, expectedEnabled, ignoreList);
+	 }
+
+public void AssetacquisitiondateoftradingandDormantperiodforenterprizezone() throws InterruptedException {
+	 
+	 HelperClass.waitForPageToLoad(driver);	
+		HelperClass.waitUntilVisible(HelperClass.getWait(),TradingandDormant.AssetacquisitiondateoftradingandDormantperiod);
+		HelperClass.waitUntilClickable(HelperClass.getWait(),TradingandDormant.AssetacquisitiondateoftradingandDormantperiod);
+		HelperClass.ClickUsingJS(HelperClass.getDriver(),TradingandDormant.AssetacquisitiondateoftradingandDormantperiod);
+		 HelperClass.waitForPageToLoad(driver);	
+		HelperClass.ClickUsingJS(HelperClass.getDriver(), By.xpath("//button[@aria-label='1 March 2023']"));
+		
+		 HelperClass.waitForPageToLoad(driver);	
+		 
+
+			WebElement wdaRate = driver.findElement(By.xpath("//input[@formcontrolname='WDARate']"));
+			 
+			// Use JavaScript to read the DOM property `.value`
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String actualWDVRate = (String) js.executeScript("return arguments[0].value;", wdaRate);
+	 
+			System.out.println("WDARate Value-->: " + actualWDVRate);
+			
+			
+			String expectedWDVRate = "0";
+	 
+			if (actualWDVRate.equals(expectedWDVRate)) {
+			    System.out.println(" WDVRate Matched: -->>" + actualWDVRate);
+			    
+			    
+			} else {
+			    System.out.println("Validation Failed: Expected ->" + expectedWDVRate + " but found ->" + actualWDVRate);
+			  
+			    
+			}
+			
+			List<String> expectedEnabled = Arrays.asList(
+				   
+				    "First Year Allowance at 100%"
+				   
+				);
+				 
+				List<String> ignoreList = Arrays.asList(
+				    "No Claim",
+				    "Business Closed"
+				);
+				 
+				HelperClass.validateCheckboxes(driver, expectedEnabled, ignoreList);
+	 }
+
+
+
 }
 
 

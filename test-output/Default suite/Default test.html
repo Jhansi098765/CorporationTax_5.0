@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/28/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 29 15:46:46 IST 2025</td>
+<td>Started on:</td><td>Sun Nov 09 13:44:41 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>188 seconds (188477 ms)</td>
+<tr><td>Total time:</td><td>3797 seconds (3797451 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,1359 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with addition amount with asset is car Between 75-130g/Km", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [495c3a5e10bf98e3f604e07649e2fd72, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50468}, goog:processID: 11344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50468/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 495c3a5e10bf98e3f604e07649e2fd72
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:280)
+</pre></div><a href='#' onClick='toggleBox("stack-trace749672494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace749672494'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [495c3a5e10bf98e3f604e07649e2fd72, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50468}, goog:processID: 11344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50468/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 495c3a5e10bf98e3f604e07649e2fd72
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:280)
+</pre></div></td>
+<td>144</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify special rate pool  with addition amount With NO CLAIM", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace200871160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace200871160'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>107</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify shortlife asset with addition amount and disposed amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f155434fe8fba04b99b7d762b6a9caf2, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49700}, goog:processID: 17228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49700/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f155434fe8fba04b99b7d762b6a9caf2
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:543)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1619442306", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1619442306'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f155434fe8fba04b99b7d762b6a9caf2, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49700}, goog:processID: 17228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49700/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f155434fe8fba04b99b7d762b6a9caf2
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:543)
+</pre></div></td>
+<td>135</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify mainpool rate with addition amount  at first year allowance at 100 percent", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace250748602", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace250748602'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>110</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with addition amount and restriction amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1139946296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1139946296'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>110</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main specailrate asset with addition amount and  larger disposed amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [81e68b69570450ac6693c2e4f8d332a0, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62178}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62178/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 81e68b69570450ac6693c2e4f8d332a0
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:648)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1553561746", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1553561746'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [81e68b69570450ac6693c2e4f8d332a0, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62178}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62178/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 81e68b69570450ac6693c2e4f8d332a0
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:648)
+</pre></div></td>
+<td>144</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify SpecialRate asset with WDV b/fwd amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34ae7e68be531c788e1069da08115490, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50136}, goog:processID: 23424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50136/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34ae7e68be531c788e1069da08115490
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:595)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1430836676", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1430836676'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34ae7e68be531c788e1069da08115490, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50136}, goog:processID: 23424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50136/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34ae7e68be531c788e1069da08115490
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:595)
+</pre></div></td>
+<td>153</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify enterpise zone and allowances with addition amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3dbfadd0e39337c9ef87078d3003fbdc, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57234}, goog:processID: 6504, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57234/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3dbfadd0e39337c9ef87078d3003fbdc
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:967)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1694898827", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1694898827'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3dbfadd0e39337c9ef87078d3003fbdc, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57234}, goog:processID: 6504, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57234/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3dbfadd0e39337c9ef87078d3003fbdc
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:967)
+</pre></div></td>
+<td>121</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with WDV b/fwd amount and  disposed amount and restriction amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace616838922", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace616838922'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>110</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with WDV b/fwd amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08298f101285c6f96c3a67f293710d8b, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62852}, goog:processID: 17704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62852/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08298f101285c6f96c3a67f293710d8b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:30)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1762544384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1762544384'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08298f101285c6f96c3a67f293710d8b, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62852}, goog:processID: 17704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62852/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08298f101285c6f96c3a67f293710d8b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:30)
+</pre></div></td>
+<td>144</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify structure and buildings asset with WDV b/fwd amount and restriction amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1826227285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1826227285'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>106</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with WDV b/fwd amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c17729356cc694910d671bb629d5236, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56937}, goog:processID: 14848, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56937/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c17729356cc694910d671bb629d5236
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1180)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1534049151", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1534049151'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c17729356cc694910d671bb629d5236, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56937}, goog:processID: 14848, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56937/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c17729356cc694910d671bb629d5236
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1180)
+</pre></div></td>
+<td>132</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with addition amount and  larger disposed amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace911396356", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace911396356'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>110</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with addition amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b5baffd7371e357232f0a6d1f88d712, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60024}, goog:processID: 2024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60024/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b5baffd7371e357232f0a6d1f88d712
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:100)
+</pre></div><a href='#' onClick='toggleBox("stack-trace562964697", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace562964697'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b5baffd7371e357232f0a6d1f88d712, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60024}, goog:processID: 2024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60024/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b5baffd7371e357232f0a6d1f88d712
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:100)
+</pre></div></td>
+<td>144</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with WDV b/fwd amount by using save", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c356f55a3820c76adfb95d4f55349fa6, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54706}, goog:processID: 7928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54706/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c356f55a3820c76adfb95d4f55349fa6
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1201)
+</pre></div><a href='#' onClick='toggleBox("stack-trace706405901", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace706405901'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c356f55a3820c76adfb95d4f55349fa6, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54706}, goog:processID: 7928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54706/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c356f55a3820c76adfb95d4f55349fa6
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1201)
+</pre></div></td>
+<td>132</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with WDV b/fwd amount by using cancel changes", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5f2a24518f49ad6e804d136866400a61, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55301}, goog:processID: 1440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55301/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f2a24518f49ad6e804d136866400a61
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1217)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1553419072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1553419072'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5f2a24518f49ad6e804d136866400a61, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55301}, goog:processID: 1440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55301/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f2a24518f49ad6e804d136866400a61
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1217)
+</pre></div></td>
+<td>132</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with addition amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2141841267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2141841267'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>110</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Structures and buildings asset with addition amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [56842cdf80bb0b738c8b6da36cb2a411, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62255}, goog:processID: 7636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62255/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56842cdf80bb0b738c8b6da36cb2a411
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:750)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1005246901", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1005246901'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [56842cdf80bb0b738c8b6da36cb2a411, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62255}, goog:processID: 7636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62255/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56842cdf80bb0b738c8b6da36cb2a411
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:750)
+</pre></div></td>
+<td>134</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify structure and buildings with  WDV b/fwd amount and addition amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace596616016", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace596616016'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>107</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with addition amount and superdeduction", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //a[contains(text(),&apos;CT-13&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.Capium.Utilites.HelperClass.waitUntilVisible(HelperClass.java:105)
+	at com.Capium.Actions.CapitalAllowancesActions.CT600_Return3(CapitalAllowancesActions.java:1956)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_ct600_return3(Capital_AllowancesStepDefination.java:1293)
+	at ✽.Select CT600 Return3(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:439)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;CT-13&apos;)]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2365d06d90f82d246d5a26e4c142b49a, findElement {using=xpath, value=//a[contains(text(),&apos;CT-13&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55934}, goog:processID: 12832, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55934/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2365d06d90f82d246d5a26e4c142b49a
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.Capium.Utilites.HelperClass.waitUntilVisible(HelperClass.java:105)
+	at com.Capium.Actions.CapitalAllowancesActions.CT600_Return3(CapitalAllowancesActions.java:1956)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_ct600_return3(Capital_AllowancesStepDefination.java:1293)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1770517351", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1770517351'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //a[contains(text(),&apos;CT-13&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.Capium.Utilites.HelperClass.waitUntilVisible(HelperClass.java:105)
+	at com.Capium.Actions.CapitalAllowancesActions.CT600_Return3(CapitalAllowancesActions.java:1956)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_ct600_return3(Capital_AllowancesStepDefination.java:1293)
+	at ✽.Select CT600 Return3(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:439)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;CT-13&apos;)]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2365d06d90f82d246d5a26e4c142b49a, findElement {using=xpath, value=//a[contains(text(),&apos;CT-13&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55934}, goog:processID: 12832, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55934/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2365d06d90f82d246d5a26e4c142b49a
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.Capium.Utilites.HelperClass.waitUntilVisible(HelperClass.java:105)
+	at com.Capium.Actions.CapitalAllowancesActions.CT600_Return3(CapitalAllowancesActions.java:1956)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_ct600_return3(Capital_AllowancesStepDefination.java:1293)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>92</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify DESIGNATED ENHANCED ALLOWANCE with addition amount  at first year allowance at 100 percent", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3bcf21e9de050498137f8d6f19394f4d, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61006}, goog:processID: 19288, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61006/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3bcf21e9de050498137f8d6f19394f4d
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1118)
+</pre></div><a href='#' onClick='toggleBox("stack-trace777890681", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace777890681'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3bcf21e9de050498137f8d6f19394f4d, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61006}, goog:processID: 19288, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61006/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3bcf21e9de050498137f8d6f19394f4d
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1118)
+</pre></div></td>
+<td>123</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify  with  zero emissions goods vehicle addition amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3717cc59e7f1033514874bb25d6da027, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63282}, goog:processID: 1644, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63282/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3717cc59e7f1033514874bb25d6da027
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1017)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1905753520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1905753520'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3717cc59e7f1033514874bb25d6da027, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63282}, goog:processID: 1644, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63282/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3717cc59e7f1033514874bb25d6da027
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1017)
+</pre></div></td>
+<td>125</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ZERO EMISSION CARS  with addition amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eb84a8431ecf1725efc1c12c19dbba26, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59220}, goog:processID: 25944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59220/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eb84a8431ecf1725efc1c12c19dbba26
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1068)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1852168781", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1852168781'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eb84a8431ecf1725efc1c12c19dbba26, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59220}, goog:processID: 25944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59220/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eb84a8431ecf1725efc1c12c19dbba26
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:1068)
+</pre></div></td>
+<td>122</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with WDV amount and disposed amount and business closed checkbox", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1061267371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1061267371'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>110</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Other charges and allowances with addition amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1852860954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1852860954'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>104</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Electric vehicle charge points and allowances with addition amount", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3342dcca9d20e93a6ff980354d716114, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54804}, goog:processID: 13564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54804/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3342dcca9d20e93a6ff980354d716114
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:917)
+</pre></div><a href='#' onClick='toggleBox("stack-trace67401769", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace67401769'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3342dcca9d20e93a6ff980354d716114, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54804}, goog:processID: 13564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54804/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3342dcca9d20e93a6ff980354d716114
+	at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:917)
+</pre></div></td>
+<td>120</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify shortlife asset with WDV b/fwd amount and  disposed amount", "Login into Capium Application"</td>
+<td><div><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1911010249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1911010249'><pre>java.lang.RuntimeException: Failed to navigate to New Eco home after retries (Case 3).
+	at com.Capium.Actions.LoginActions.NavigateToModule(LoginActions.java:694)
+	at com.Capium.StepDefination.LoginStepDefination.redirect_to_corporation_tax_five_point_zero(LoginStepDefination.java:100)
+	at ✽.redirect to Corporation tax five point zero(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:8)
+</pre></div></td>
+<td>110</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Main pool asset with WDV b/fwd amount by using save", "Login into Capium Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [50dff0601c934427d767b090da0c6709, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51209}, goog:processID: 9788, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51209/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 50dff0601c934427d767b090da0c6709
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:78)
+</pre></div><a href='#' onClick='toggleBox("stack-trace781103026", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace781103026'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]&quot;}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [50dff0601c934427d767b090da0c6709, findElement {using=xpath, value=//button[@aria-label=&apos;Choose month and year&apos; and .//span[normalize-space(text())=&apos;2021&apos;]]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51209}, goog:processID: 9788, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51209/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 50dff0601c934427d767b090da0c6709
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilites.HelperClass.ClickUsingJS(HelperClass.java:383)
+	at com.Capium.Actions.CapitalAllowancesActions.Assetacquisitiondate(CapitalAllowancesActions.java:205)
+	at com.Capium.StepDefination.Capital_AllowancesStepDefination.select_asset_acquisition_date(Capital_AllowancesStepDefination.java:95)
+	at ✽.Select Asset acquisition date(file:///D:/CT%205.0/CorporationTax_5.0/src/test/resources/FeatureFiles/Capital_allowance.feature:78)
+</pre></div></td>
+<td>143</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +1429,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Capium.RunnerFiles.TradingandDormantRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.TradingandDormantRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Electric vehicle charge points and allowances with addition amount", "Login into Capium Application"</td>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify kebab icon for capital allowance", "Login into Capium Application"</td>
 <td></td>
-<td>185</td>
-<td>com.Capium.RunnerFiles.TradingandDormantRunner@6a2f6f80</td></tr>
+<td>120</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Click on the created CT600 Return and navigate to Capital Allowances Calculator excess amount screen.", "Login into Capium Application"</td>
+<td></td>
+<td>96</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
+<tr>
+<td title='com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner.runScenario()'><b>runScenario</b><br>Test class: com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify kebab icon for capital allowance", "Login into Capium Application"</td>
+<td></td>
+<td>123</td>
+<td>com.Capium.RunnerFiles.CapitalAllowances_CalculatorRunner@6a2f6f80</td></tr>
 </table><p>
 </body>
 </html>

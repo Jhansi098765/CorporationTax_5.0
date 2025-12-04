@@ -12,104 +12,96 @@ import com.Capium.Utilites.StepTracker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+	 
+	public class LoginStepDefination {
 
-public class LoginStepDefination {
+		LoginActions loginpage=new LoginActions();
 
+		@Given("Launch the browser")
 
+		public void launch_the_browser() {
 
-	
-	    LoginActions loginpage = new LoginActions();
+			StepTracker.setCurrentStep("Launch the browser");
 
-	    @Given("Launch the browser")
-	    public void launch_the_browser() {
-	        StepTracker.setCurrentStep("Launch the browser");
-	        Log.info("Launch browser successfully.");
-	    }
+			Log.info("Launch browser successfully.");
 
-	    @Given("User need to enter the Application Url")
-	    public void user_need_to_enter_the_application_url() {
-	        String url = ConfigReader.getProperty("app.url");
-	        HelperClass.openPage(url);
-	        StepTracker.setCurrentStep("User need to enter the Application Url");
-	        Log.info("URL entered successfully.");
-	    }
+		}
 
-	    @When("User Enter username and Password")
-	    public void user_enter_username_and_password() throws InterruptedException {
-	        String username = ConfigReader.getProperty("username");
-	        String password = ConfigReader.getProperty("password");
-	        loginpage.EnterUsername(username);
-	        loginpage.EnterPassword(password);
-	        StepTracker.setCurrentStep("User Enter username and Password");
-	        Log.info("Username and Password entered successfully.");
-	    }
+		@Given("User need to enter the Application Url")
 
-	    @Then("User Click on login button")
-	    public void user_click_on_login_button() throws Exception {
-	        loginpage.ClickLoginbtn();
-	        StepTracker.setCurrentStep("User Click on login button");
-	        Log.info("User Click on login button successfully.");
-	    }
+		public void user_need_to_enter_the_application_url() {
+
+			String url = ConfigReader.getProperty("app.url");
+
+			HelperClass.openPage(url);
+
+			 StepTracker.setCurrentStep("User need to enter the Application Url");		
+
+			 Log.info("URL entered successfully.");
+
+			 //loginpage.ClickOnAccountantLogin();
+
+		}
+
+		@When("User Enter username and Password")
+
+		public void user_enter_username_and_password() throws InterruptedException {
+
+			String username = ConfigReader.getProperty("username");
+
+			String password = ConfigReader.getProperty("password");
+
+			loginpage.EnterUsername(username);
+
+			loginpage.EnterPassword(password);
+
+			StepTracker.setCurrentStep("User Enter username and Password");
+
+			Log.info("Username and Password entered successfully.");
+
+		}
+
+//		@Then("User Click  on login button")
 //
-//	    @Then("redirect to Corporation tax")
-//	    public void redirect_to_corporation_tax() throws IOException {
-//	        loginpage.navigateToCorporationTaxModule();
-//	    }
-//	}
-@Then("redirect to Corporation tax five point zero")
-public void redirect_to_corporation_tax_five_point_zero() throws IOException {
-   loginpage.navigateToCorporationTaxModule();
-	
+//		public void user_click_on_login_button() throws Exception {
+//
+//			loginpage.ClickLoginbtn();
+//
+//			StepTracker.setCurrentStep("User Click on login button");
+//
+//			Log.info("User Click on login button successfully.");
+//
+//		}
+
+		
+
+@Then("User Click on login button")
+public void user_click_on_login_button() throws Exception {
+	loginpage.ClickLoginbtn();
+
+	StepTracker.setCurrentStep("User Click on login button");
+
+	Log.info("User Click on login button successfully.");
+
 }
-}
-//	LoginActions loginpage=new LoginActions();
-//	
-//	@Given("Launch the browser")
-//	public void launch_the_browser() {
-//		StepTracker.setCurrentStep("Launch the browser");
-//		Log.info("Launch browser successfully.");
-//	}
-//
-//	@Given("User need to enter the Application Url")
-//	public void user_need_to_enter_the_application_url() {
-//		String url = ConfigReader.getProperty("app.url");
-//		HelperClass.openPage(url);
-//		 StepTracker.setCurrentStep("User need to enter the Application Url");		 
-//		 Log.info("LRL entered successfully.");
-//		 //loginpage.ClickOnAccountantLogin();
-//		 
-//	}
-//
-//	@When("User Enter username and Password")
-//	public void user_enter_username_and_password() throws InterruptedException {
-//		String username = ConfigReader.getProperty("username");
-//		String password = ConfigReader.getProperty("password");
-//		loginpage.EnterUsername(username);
-//		loginpage.EnterPassword(password);
-//		StepTracker.setCurrentStep("User Enter username and Password");
-//		Log.info("Username and Password entered successfully.");
-//		
-//	}
-//
-//	@Then("User Click on login button")
-//	public void user_click_on_login_button() throws Exception {
-//		loginpage.ClickLoginbtn();
-//		StepTracker.setCurrentStep("User Click on login button");
-//		Log.info("User Click on login button successfully.");
-//	}
-//	
-//	//@Then("click on C icon")
-////	public void click_on_c_icon() {
-//	   
-//	//}
-//	
-//	@Then("redirect to Corporation tax")
-//	public void redirect_to_corporation_tax_five_point_zero() throws IOException {
-//	   loginpage.navigateToCorporationTaxModule();
-//	}
-//}
-//
-//
-//
+
+		//@Then("click on C icon")
+
+//		public void click_on_c_icon() {
+
+		//}
+
+		@Then("redirect to Corporation tax five point zero")
+
+		public void redirect_to_corporation_tax_five_point_zero() throws IOException {
+
+			HelperClass.sleep1(2000);
+
+		   loginpage.NavigateToModule("Corporation Tax");
+
+		}
+
+	}
+	 
 
 

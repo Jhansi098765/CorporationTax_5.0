@@ -568,6 +568,15 @@ public WebElement CapitalallowancesAndBalancingChargeforotherchargesandallowance
 @FindBy(xpath="//a[normalize-space(.)='Page 9 Capital allowances and Balancing charges']")
 public WebElement CapitalallowancesAndBalancingChargeforotherchargesandallowancesformainform2;
 
+@FindBy(xpath="(//mat-form-field[@appearance='fill'])[1]")
+public WebElement AssetacquisitiondateoftradingandDormantperiodforelectricvehiclechargepoints;
+
+@FindBy(xpath="(//mat-form-field[@appearance='fill'])[1]")
+public WebElement AssetacquisitiondateoftradingandDormantperiodforenterprizezone;
+
+@FindBy(xpath="//a[normalize-space(.)='Page 9 Capital allowances and Balancing charges']")
+public WebElement CapitalallowancesAndBalancingChargeinmainformfortradinganddormant;
+
 }
 
 

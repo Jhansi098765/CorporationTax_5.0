@@ -1126,7 +1126,7 @@ public static void validateAndVerify(By locator, String string) {
 	            System.out.println(" Unexpected error during validation: " + e.getMessage());
 	        }
 	    }
-	        public static void validatePageText(WebDriver driver, String expectedText, By locator) {
+	        public static boolean validatePageText(WebDriver driver, String expectedText, By locator) {
 	            try {
 	                WebElement element = driver.findElement(locator);
 	                String actualText = element.getText().trim();
@@ -1144,6 +1144,7 @@ public static void validateAndVerify(By locator, String string) {
 	            } catch (Exception e) {
 	                throw new AssertionError("Failed to validate page text. Error: " + e.getMessage());
 	            }
+				return false;
 	           
 	        }
 	    	public static void selectCheckboxAndValidateRate(String checkboxLabelText, String expectedWDARate) {
@@ -1353,7 +1354,7 @@ public static void selectCheckboxOnly(String checkboxLabelText) {
 public static boolean safeClick(WebElement element, String logMessage) {
     for (int i = 0; i < 3; i++) {
         try {
-            waitForPageToLoad(driver);
+           // waitForPageToLoad(driver);
                     wait.until(ExpectedConditions.elementToBeClickable(element));
             try {
                 element.click();
@@ -1427,9 +1428,29 @@ public static void fastAngularClick(WebDriver driver, By locator, String name) {
     }
 }
 
+
+public static WebElement waitForVisibility(WebElement element) {
+	return getWait().until(ExpectedConditions.visibilityOf(element));
+}
+public static void sleep1(int millis) {
+    try {
+        Thread.sleep(millis);
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+    }
+}
+	
+}
+
+//public static void safeClick(WebElement element, String logMessage) {
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//	wait.until(ExpectedConditions.visibilityOf(element));
+//	scrollIntoView(element);
+//	wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+//}
 // ... other utility methods
 
-}
+
 
 //Mouse hover 
 

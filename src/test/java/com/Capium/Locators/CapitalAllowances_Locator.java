@@ -17,7 +17,7 @@ public class CapitalAllowances_Locator {
 	@FindBy(xpath=" //a[contains(text(),' vijith')]")
 	public WebElement client;
 	
-	@FindBy(xpath="//a[contains(text(),' CT-10')]")
+	@FindBy(xpath="//a[contains(text(),' CT-2')]")
 	public WebElement CT600_Return ;
 
 	@FindBy(xpath="//p[normalize-space()='Capital Allowances']//parent::div//button")

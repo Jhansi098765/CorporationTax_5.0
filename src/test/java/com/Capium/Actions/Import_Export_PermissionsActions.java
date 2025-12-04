@@ -42,13 +42,44 @@ public class Import_Export_PermissionsActions {
 	}
 	
 	public void taxreturn_Arrow() throws InterruptedException {
-		Thread.sleep(5000);
-		HelperClass.waitUntilVisible(HelperClass.getWait(),importexportpermissions.TaxreturnArrow);
-		HelperClass.waitUntilClickable(HelperClass.getWait(),importexportpermissions.TaxreturnArrow);
-		HelperClass.ClickUsingJS(HelperClass.getDriver(),importexportpermissions.TaxreturnArrow);
-		Thread.sleep(4000);
+//		Thread.sleep(5000);
+//		HelperClass.waitUntilVisible(HelperClass.getWait(),importexportpermissions.TaxreturnArrow);
+//		HelperClass.waitUntilClickable(HelperClass.getWait(),importexportpermissions.TaxreturnArrow);
+//		HelperClass.ClickUsingJS(HelperClass.getDriver(),importexportpermissions.TaxreturnArrow);
+//		Thread.sleep(4000);
+		
+			 HelperClass.waitForPageToLoad(driver);
+			 try {
+				    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+
+				    WebElement taxReturnButton = wait.until(ExpectedConditions
+				            .elementToBeClickable(By.xpath("(//mat-icon[text()=' keyboard_arrow_right ' and contains(@class, 'mat-icon')])[3]")));
+
+				    taxReturnButton.click();
+				    HelperClass.waitForPageToLoad(driver);
+
+				    System.out.println("Tax Return arrow clicked successfully.");
+				    
+				    // Pass condition
+				    Assert.assertTrue(true, "Tax Return arrow clicked successfully.");
+				    
+				} catch (TimeoutException e) {
+				    // Fail if button was not clickable in time
+				    Assert.fail("Tax Return arrow not clickable within timeout: " + e.getMessage());
+				    
+				} catch (Exception e) {
+				    // Fail on any unexpected error
+				    Assert.fail("Unexpected error while clicking Tax Return arrow: " + e.getMessage());
+				}
+
+	      HelperClass.validatePageText(driver,"Accounting Period",By.xpath("//span[@title='Accounting Period']"));
+		 HelperClass.validatePageText(driver,"CT600 Return",By.xpath("//span[@title='CT600 Return']"));
+		 HelperClass.validatePageText(driver,"Submission History",By.xpath("//span[@title='Submission History']"));
+		 HelperClass.validatePageText(driver,"Data Security",By.xpath("//span[@title='Data Security']"));
+
 		Log.info("Accounting period,CT600 return, Submission history, Data security");
-	}
+}
+
 //	public void viewRadioButton() {
 //		HelperClass.ClickUsingJS(HelperClass.getDriver(),importexportpermissions.ViewRadioButton);
 //		HelperClass.viewRadioButton("//table/tbody/tr[2]/td[2]/mat-radio-group/mat-radio-button/div//label[normalize-space()='View']/parent::div//input");

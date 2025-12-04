@@ -1,82 +1,84 @@
 Feature: Verify export to CSV
 Background: User login
-    Given Launch the browser
+     Given Launch the browser
     And User need to enter the Application Url
     When User Enter username and Password
     Then User Click on login button
     And redirect to Corporation tax five point zero
   
-  #Scenario: Expand tax return section to view its permissions 
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #And Click on Tax Return arrow
-  #And Click on View checkbox
- 
- 
-  #Scenario: Exapnd Quickentry section to view its permissions 
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #And Click on  Quickentry arrow
- 
-  #Scenario: Expand Calculator in Quick entry section to view its permissions 
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #And Click on  Quickentry arrow
-  #And Click on Calculator arrow
-  #
-  #Scenario: Expand Attachments in Quick entry section to view its permissions 
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #And Click on  Quickentry arrow
-  #And Click on  Attachments arrow
- #
-  #Scenario: Expand Reports in Quick entry section to view its permissions 
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #And Click on  Quickentry arrow
-  #And Click on  Reportss arrow
- #
-  #Scenario: Expand Manage section to view its permissions 
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #And Click on  Manage_arrow
-  #
-  #Scenario: Expand Calculator Section to view its permissions 
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #And Click on  CalculatorArrow
-  #
-  #Scenario: Verify search textfield in permissions
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #Then  Click on Search textfield and Enter the permission
-  #
-  #Scenario: Verify Savebutton
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #Then give permission access as view for managerAccess in QuickEntry
-  #And Click on SaveButtton
-  #
-  #Scenario: Verify SaveAndExitButton
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #Then give permission access as view for managerAccess in QuickEntry
-  #And Click on SaveAndExitButton
-  #
-  #Scenario: Verify CancelChangesButton
-  #Given Click on ManageDashBoard
-  #When  Click on  Permissions
-  #Then give permission access as view for managerAccess in QuickEntry
-  #And Click on CancelChangesButton
   
-  #Scenario: verify import with clients
-  #Given Click on ManageDashBoard
-  #And  Click on import of manage screen
-  #And Click on clients radiobutton of import
-  #And Click on Next of import
-  #And Click on Browse of import
-  #And Click on NextButton after browse
-  #And Click on save and Next of import
+  
+  Scenario: Expand tax return section to view its permissions 
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  And Click on Tax Return arrow
+ 
+ 
+  Scenario: Exapnd Quickentry section to view its permissions 
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  And Click on  Quickentry arrow
+ 
+  Scenario: Expand Calculator in Quick entry section to view its permissions 
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  And Click on  Quickentry arrow
+  And Click on Calculator arrow
+  
+  Scenario: Expand Attachments in Quick entry section to view its permissions 
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  And Click on  Quickentry arrow
+  And Click on  Attachments arrow
+ 
+  Scenario: Expand Reports in Quick entry section to view its permissions 
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  And Click on  Quickentry arrow
+  And Click on  Reportss arrow
+ 
+  Scenario: Expand Manage section to view its permissions 
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  And Click on  Manage_arrow
+  
+  Scenario: Expand Calculator Section to view its permissions 
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  And Click on  CalculatorArrow
+  
+  Scenario: Verify search textfield in permissions
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  Then  Click on Search textfield and Enter the permission
+  
+  Scenario: Verify Savebutton
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  Then give permission access as view for managerAccess in QuickEntry
+  And Click on SaveButtton
+  
+  Scenario: Verify SaveAndExitButton
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  Then give permission access as view for managerAccess in QuickEntry
+  And Click on SaveAndExitButton
+  
+  Scenario: Verify CancelChangesButton
+  Given Click on ManageDashBoard
+  When  Click on  Permissions
+  Then give permission access as view for managerAccess in QuickEntry
+  And Click on CancelChangesButton
+  
+  
+  Scenario: verify import with clients
+  Given Click on ManageDashBoard
+  And  Click on import of manage screen
+  And Click on clients radiobutton of import
+  And Click on Next of import
+  And Click on Browse of import
+  And Click on NextButton after browse
+  And Click on save and Next of import
   
    #EXPORT AS EXCEL FOR CLIENTS
    
